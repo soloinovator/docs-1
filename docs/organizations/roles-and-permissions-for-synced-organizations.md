@@ -69,7 +69,7 @@ Depending on your role on the Git provider you will have different permissions o
       <td class="yes">Yes</td>
       <td><a href="#change-analysis-configuration">Configurable</a></td>
       <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
+      <td style="background-color: salmon;">No</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
@@ -80,7 +80,7 @@ Depending on your role on the Git provider you will have different permissions o
       <td class="yes">Yes</td>
       <td><a href="#change-analysis-configuration">Configurable</a></td>
       <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
+      <td style="background-color: salmon;">No</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
@@ -206,7 +206,7 @@ Depending on your role on the Git provider you will have different permissions o
       <td class="yes">Yes<sup><a href="#note-2">2</a></sup></td>
       <td class="yes">Yes</td>
       <td><a href="#change-analysis-configuration">Configurable</a></td>
-      <td>No</td>
+      <td style="background-color: orange;">No</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
