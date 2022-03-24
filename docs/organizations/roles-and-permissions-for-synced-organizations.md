@@ -166,7 +166,7 @@ Depending on your role on the Git provider you will have different permissions o
       <td>No</td>
     </tr>
     <tr>
-      <td><strong>Owner</strong></td>
+      <td><strong>Group Owner</strong></td>
       <td class="yes">Yes<sup><a href="#note-2">2</a></sup></td>
       <td class="yes">Yes</td>
       <td class="yes">Yes</td>
