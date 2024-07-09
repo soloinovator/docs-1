@@ -18,3 +18,4 @@ mkdocs-meta-descriptions-plugin==2.2.0
 mkdocs-monorepo-plugin==1.0.4
 mkdocs-redirects==1.2.0
 mkdocs-rss-plugin==1.6.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
