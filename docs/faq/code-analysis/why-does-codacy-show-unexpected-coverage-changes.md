@@ -52,7 +52,7 @@ Based on the information obtained from the coverage reports, Codacy calculates c
 -   The **coverage** for a file, commit, or pull request is the percentage of covered lines in the universe of coverable lines for that file, commit, or pull request. For example, a commit with 85 covered lines out of a total of 100 coverable lines has 85% coverage.
 
 {%
-    include-markdown "which-metrics-does-codacy-calculate.md"
+    include-markdown "./which-metrics-does-codacy-calculate.md"
     start="<!--code-coverage-metrics-start-->"
     end="<!--code-coverage-metrics-end-->"
 %}
@@ -239,7 +239,7 @@ Consider an example pull request where Codacy shows the following metrics:
 However, since the proportion between the total number of covered and coverable lines across all files in the repository is now different, there can be a drop in the coverage variation for the pull request.
 
 !!! important
-    If you're using the [gate **Coverage variation is under**](../../repositories-configure/adjusting-quality-settings.md#gates), configure at least a **-0.10% coverage variation margin** to ensure that developers aren't blocked while performing code refactors such as the one from this example.
+    If you're using the [gate **Coverage variation is under**](../../repositories-configure/adjusting-quality-gates.md), configure at least a **-0.10% coverage variation margin** to ensure that developers aren't blocked while performing code refactors such as the one from this example.
 
 The table below represents two example coverage reports reflecting a pull request that removes lines 5 and 6 of the file `ClassA.java`:
 

@@ -1,5 +1,7 @@
 # How do I reanalyze my repository?
 
+{% include-markdown "../../assets/includes/admin-access-control-info.md" %}
+
 Reanalyze the last commit in your branch or pull request:
 
 -   To update the Codacy analysis results taking into account the most recent configurations for your repository without waiting for a new commit to trigger the analysis
@@ -8,9 +10,11 @@ Reanalyze the last commit in your branch or pull request:
     ![Greyed-out Codacy badge and repository grade](images/codacy-badge-grade-gray.png)
 
 !!! important
-    If you have the setting **Run analysis on your build server** enabled in your repository **Settings** page so that you can [run client-side tools](../../repositories-configure/local-analysis/client-side-tools.md), you can't trigger a new analysis from the Codacy UI.
+    -   If you have the setting **Run analysis on your build server** enabled in your repository **Settings** page so that you can [run client-side tools](../../repositories-configure/local-analysis/client-side-tools.md), you can't trigger a new analysis from the Codacy UI.
 
-    Instead, you must manually run the client-side tools or wait for them to report the results for a new commit.
+        Instead, you must manually run the client-side tools or wait for them to report the results for a new commit.
+
+    -   You can only reanalyze commits to branches or pull requests in your repository if the committer [is part of your organization](../../organizations/managing-people.md).
 
 ## Reanalyzing a branch
 
@@ -22,7 +26,7 @@ To reanalyze a branch in your repository:
 
     ![Selecting the last commit on a branch](images/reanalyze-repository-commits-list.png)
 
-1.  Click the icon next to the **Current status** of the commit to trigger a reanalysis. Codacy will display a message when the analysis is complete.
+1.  Click the **Reanalyze** link to trigger a reanalysis. Codacy will display the status of the reanalysis request.
 
     ![Reanalyzing a commit](images/reanalyze-repository-commit.png)
 
@@ -34,7 +38,7 @@ To reanalyze a pull request in your repository:
 
     ![Selecting a pull request](images/reanalyze-repository-prs-list.png)
 
-1.  Click the icon next to the **Current status** of the pull request to trigger a reanalysis. Codacy will display a message when the analysis is complete.
+1.  Click the **Reanalyze** button to trigger a reanalysis. Codacy will display the status of the reanalysis request.
 
     ![Reanalyzing a pull request](images/reanalyze-repository-pr.png)
 

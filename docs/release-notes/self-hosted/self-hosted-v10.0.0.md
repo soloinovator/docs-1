@@ -39,13 +39,13 @@ To upgrade PostgreSQL:
 
 ## Product enhancements
 
--   Added support for [Kubernetes 1.22.\* and MicroK8s 1.22.\*](https://docs.codacy.com/v10.0/chart/requirements/#kubernetes-or-microk8s-cluster-setup) (REL-992)
+-   Added support for [Kubernetes 1.22.\*](https://docs.codacy.com/v10.0/chart/requirements/#kubernetes-or-microk8s-cluster-setup) (REL-992)
 -   You can now configure your Codacy GitHub App to use [expiring user access tokens](https://docs.github.com/en/developers/apps/building-github-apps/refreshing-user-to-server-access-tokens). (PLUTO-133)
 -   Improved the performance of applying coding standards to repositories to avoid timeouts when updating hundreds of repositories. (PLUTO-83)
 -   The **Status** column of the [coverage reports list](https://docs.codacy.com/v10.0/coverage-reporter/#validating-coverage) now includes direct links to troubleshooting instructions when there are coverage errors. (IO-155)
 -   Improved the performance and error handling of retrieving many open pull requests from the Git providers while populating the [**Pull requests** page](https://docs.codacy.com/v10.0/repositories/pull-requests/). (IO-133)
 -   Codacy now supports the [client-side tool Unity Roslyn Analyzers](https://docs.codacy.com/v10.0/related-tools/local-analysis/client-side-tools/) for reporting error-prone and performance issues on C# projects that use the Unity framework. (IO-96)
--   Codacy now displays the coverage variation metric with a precision of two decimal places on the [Repository Dashboard](https://docs.codacy.com/v10.0/repositories/repository-dashboard.md) and [Organization Overview](https://docs.codacy.com/v10.0/organizations/organization-overview.md), and you can [define quality gates](https://docs.codacy.com/v10.0/repositories-configure/adjusting-quality-settings.md#gates) with a coverage variation threshold using the same precision.
+-   Codacy now displays the coverage variation metric with a precision of two decimal places on the [Repository Dashboard](https://docs.codacy.com/v10.0/repositories/repository-dashboard/) and [Organization Overview](https://docs.codacy.com/v10.0/organizations/organization-overview/), and you can [define quality gates](https://docs.codacy.com/v10.0/repositories-configure/adjusting-quality-settings/#gates) with a coverage variation threshold using the same precision.
 
     The increased precision of the metric reflects the code coverage changes better by reducing issues with rounding errors. (IO-56)
 
@@ -56,7 +56,7 @@ To upgrade PostgreSQL:
     -   [<span class="skip-vale">eslint-plugin-typescript-sort-keys</span>](https://www.npmjs.com/package/eslint-plugin-typescript-sort-keys) (CY-6561)
 -   Added support for the remark-lint plugin [<span class="skip-vale">remarkjs/remark-gfm</span>](https://github.com/remarkjs/remark-gfm). (CY-6513)
 
--   While [configuring a coding standard](https://docs.codacy.com/v10.0/organizations/using-a-coding-standard.md), you can now toggle all code patterns using the new checkbox on the header. This allows you to conveniently toggle code patterns in bulk, for example, to enable all security code patterns. (CY-6255, CY-6336)
+-   While [configuring a coding standard](https://docs.codacy.com/v10.0/organizations/using-a-coding-standard/), you can now toggle all code patterns using the new checkbox on the header. This allows you to conveniently toggle code patterns in bulk, for example, to enable all security code patterns. (CY-6255, CY-6336)
 
     ![Selecting all code patterns while configuring a coding standard](../images/cy-6336.png)
 
@@ -107,7 +107,7 @@ This version of Codacy Self-hosted includes the tool versions below. The tools t
 -   ShellCheck 0.8.0
 -   Sonar C# 8.39
 -   Sonar Visual Basic 8.15
--   spectral-rulesets 1.2.7
+-   Spectral 1.2.7
 -   SpotBugs 4.5.3
 -   SQLint 0.2.1
 -   Staticcheck 2022.1.3
