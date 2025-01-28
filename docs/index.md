@@ -1,5 +1,5 @@
 ---
-description: Documentation homepage for the Codacy Quality automated code review tool.
+description: Documentation homepage for the Codacy automated code review tool.
 ---
 
 # Documentation home
@@ -15,12 +15,12 @@ description: Documentation homepage for the Codacy Quality automated code review
 
     <a class="content-link" href="getting-started/supported-languages-and-tools/">
       <div>Supported languages</div>
-      <div>Codacy supports over 40 programming languages and frameworks out of the box, and regularly adds support for new languages and tools.</div>
+      <div>Codacy supports over 40 programming languages and infrastructure-as-code platforms out of the box, and regularly adds support for new languages and tools.</div>
     </a>
   </div>
 
   <div class="content-link-column">
-    <div>Using Codacy Quality</div>
+    <div>Using Codacy</div>
 
     <a class="content-link" href="organizations/what-are-organizations/">
       <div>Creating and managing an organization</div>
@@ -39,11 +39,11 @@ description: Documentation homepage for the Codacy Quality automated code review
 <div class="topic-row">
   <a class="topic-card"  href="organizations/managing-people/">
     <div class="tc-icon">
-      <img alt="Adding and managing Authors" src="/assets/images/icon-user-management.svg">
+      <img alt="Adding and managing people" src="/assets/images/icon-user-management.svg">
     </div>
     <div class="tc-content">
       <div>Managing people in organizations</div>
-      <div>Invite your team members to join Codacy to analyze their commits on private repositories.</div>
+      <div>Invite your teammates to join Codacy to analyze their commits on private repositories.</div>
     </div>
   </a>
   <a class="topic-card" href="coverage-reporter/">

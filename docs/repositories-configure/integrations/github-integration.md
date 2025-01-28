@@ -6,33 +6,25 @@ description: Enable the GitHub integration to have status checks, annotations, i
 
 The GitHub integration incorporates Codacy on your existing Git provider workflows by reporting issues and the analysis status directly on your pull requests.
 
-When the integration is enabled, you can also create pull request comments and GitHub issues directly from Codacy when [browsing the existing issues](../../repositories/issues.md) on the repository:
-
-![GitHub integration for issues](images/github-integration-issues.png)
-
-## Enabling the GitHub integration {: id="enabling"}
-
-To enable the GitHub integration, open your repository **Settings**, tab **Integrations**. When you add a new repository, the integration is already enabled by default.
+When you add a new repository, Codacy sets the GitHub integration using the [default settings for your organization](../../organizations/integrations/default-git-provider-integration-settings.md). You can then [customize the settings](#configuring) for the repository.
 
 ![GitHub integration](images/github-integration.png)
-
-If you remove the integration, you can enable it again as follows:
-
-1.  Click the button **Add integration** and select **GitHub** on the list.
-1.  Click the button **Enable** and follow the instructions.
-
-    !!! important
-        The user that enables the integration [must have administrator access to the repository](../../organizations/roles-and-permissions-for-organizations.md#permissions-for-github).
 
 ## Configuring the GitHub integration {: id="configuring"}
 
 To configure the GitHub integration, open your repository **Settings**, tab **Integrations**.
 
-Depending on the options that you enable, Codacy will automatically update pull requests on GitHub with extra information when accepting pull requests:
+Depending on the options that you enable, Codacy will automatically update pull requests on GitHub with extra information when accepting pull requests.
+
+{%
+    include-markdown "../../assets/includes/default-git-provider-settings-tip.md"
+    start="<!--default-settings-apply-all-start-->"
+    end="<!--default-settings-apply-all-end-->"
+%}
 
 ### Status checks
 
-Adds a report to your pull requests showing whether your pull requests and coverage are up to standards or not as configured on the [quality settings](../../repositories-configure/adjusting-quality-settings.md) of your repository. You can then optionally [block merging pull requests that aren't up to standards](../../getting-started/integrating-codacy-with-your-git-workflow.md#blocking-pull-requests).
+Adds a report to your pull requests showing whether your pull requests and coverage are up to standards or not as configured on the [quality gate rules](../../repositories-configure/adjusting-quality-gates.md) for your repository. You can then optionally [block merging pull requests that aren't up to standards](../../getting-started/integrating-codacy-with-your-git-workflow.md#blocking-pull-requests).
 
 {% include-markdown "../../assets/includes/status-checks-important.md" %}
 
@@ -74,15 +66,48 @@ When there are new coverage results, Codacy updates the last coverage summary co
 
 Adds comments on the lines of the pull request where Codacy finds new issues with suggestions on how to fix the issues. Codacy doesn't apply any changes automatically. To apply the changes, [manually review and accept the suggestions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes).
 
+!!! tip
+    Enable also **AI-enhanced comments** to get ready-to-commit AI-generated fixes.
+
 ![Comment suggesting a fix on GitHub](images/github-integration-suggest-fixes.png)
 
+### AI-enhanced comments
+
+Adds AI-enhanced comments, providing insights and ready-to-commit AI-generated fixes for identified issues in cases where tool-suggested fixes are not supported. To enable this option, you must enable **Suggested fixes** first.
+
+{% include-markdown "../../assets/includes/ai-info.md" %}
+
+![AI-enhanced comment on GitHub](images/github-integration-ai-comment.png)
+
+## Generating automatic pull request summaries
+
+!!! info "This is a preview feature"
+    This is an upcoming Codacy feature. If you're interested, contact <a href="mailto:support@codacy.com">support@codacy.com</a> for early access.
+
+Codacy can provide a clear, high-level summary of the code changes introduced by a pull request, based on the committed code.
+Codacy generates an overview of the changes in the pull request so that any reviewer can understand its intent and impact.
+
+![Automatic Summary on GitHub](images/github-integration-automatic-summary.png)
+
 !!! note
-    This feature is in early access and has the following limitations for now:
+    -   This feature uses only AWS services within Codacy's existing infrastructure. No information is shared with any other third party or used to train AI models.
+    -   Summaries are generated using the pull request title, branch name, commit messages, and changes diff.
 
-    -   The only supported Git providers are GitHub Cloud and GitHub Enterprise.
-    -   The only two tools that suggest fixes are [ESLint](https://eslint.org/docs/rules/) and [markdownlint](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). However, we're planning to support suggestions from more tools.
+To enable this feature, add the following to the [Codacy configuration file](../codacy-configuration-file.md) `.codacy.yaml` in the root of your repository:
 
-    📢 [Activate suggested fixes now](#enabling) and [let us know](mailto:support@codacy.com?subject=Feedback on Suggest fixes) what you think!
+```yaml
+---
+reviews:
+  high_level_summary: true
+```
+
+You can also enable this feature across your organization by creating the above file in the root of a repository named `.codacy`. This file will be used as the default configuration for all repositories in the organization and overridden by repository-specific configuration files.
+
+Once enabled, summaries will be created when pull requests are opened and updated at each commit to reflect any changes to the pull request.
+
+Pull requests opened by bots, such as Dependabot, are ignored.
+
+If you see duplicated comments posted by Codacy on the same pull request, please ensure that your repository only has one configured webhook for Codacy.
 
 ## See also
 
