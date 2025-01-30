@@ -84,7 +84,7 @@ The following table contains example coverage tools that generate reports in for
 </tr>
 <tr>
     <td>PHP</td>
-    <td><a href="https://phpunit.readthedocs.io/en/10.0/code-coverage.html">PHPUnit</a></td>
+    <td><a href="https://phpunit.readthedocs.io/en/11.0/code-coverage.html">PHPUnit</a></td>
     <td><code>coverage-xml/index.xml</code> (PHPUnit XML version &lt;= 4)<br/>
         <code>clover.xml</code> (Clover)</td>
 </tr>
@@ -159,13 +159,13 @@ After having coverage reports set up for your repository, you must use the Codac
 1.  Set up an API token to allow Codacy Coverage Reporter to authenticate on Codacy:
     {: id="authenticate"}
 
-    -   **If you're setting up coverage for one repository**, [obtain a project API token](../codacy-api/api-tokens/#project-api-tokens) and set the following environment variable to specify your project API token:
+    -   **If you're setting up coverage for one repository**, [obtain a repository API token](../codacy-api/api-tokens.md#repository-api-tokens) and set the following environment variable to specify your repository API token:
 
         ```bash
-        export CODACY_PROJECT_TOKEN=<your project API token>
+        export CODACY_PROJECT_TOKEN=<your repository API token>
         ```
 
-    -   **If you're setting up and automating coverage for multiple repositories**, [obtain an account API Token](../codacy-api/api-tokens/#account-api-tokens) and set the following environment variables:
+    -   **If you're setting up and automating coverage for multiple repositories**, [obtain an account API Token](../codacy-api/api-tokens.md#account-api-tokens) and set the following environment variables:
 
         -   **CODACY_API_TOKEN:** Your account API token.
 
@@ -189,11 +189,11 @@ After having coverage reports set up for your repository, you must use the Codac
 
         It's a best practice to store API tokens as environment variables. Check the documentation of your CI/CD platform on how to do this.
 
-1.  **If you're using Codacy Self-hosted** set the following environment variables to specify your Codacy instance URL and the Codacy Coverage Reporter version that's compatible with Codacy Self-hosted {{extra.version}}:
+1.  **If you're using Codacy Self-hosted** set the following environment variables to specify your Codacy instance URL and the Codacy Coverage Reporter version that's compatible with Codacy Self-hosted {{ extra.codacy_self_hosted_version }}:
 
     ```bash
     export CODACY_API_BASE_URL=<your Codacy instance URL>
-    export CODACY_REPORTER_VERSION=13.10.15
+    export CODACY_REPORTER_VERSION={{ extra.codacy_coverage_reporter_version }}
     ```
 
 1.  Run Codacy Coverage Reporter **on the root of the locally checked out branch of your Git repository**, specifying the relative path to the coverage report to upload:
@@ -333,10 +333,10 @@ Follow these instructions to validate that your coverage setup is working correc
     </tr>
     <tr>
         <td>
-            Codacy didn't analyze the commit on a private repository because the commit author isn't a member of the Codacy organization.
+            Codacy didn't analyze the commit on a private repository because the committer doesn't belong to the Codacy organization.
         </td>
         <td>
-            Make sure that you <a href="../organizations/managing-people/#adding-people">add all commit authors as members of the Codacy organization</a>.
+            Make sure that you <a href="../organizations/managing-people/#adding-people">add all committers to your Codacy organization</a>.
         </td>
     </tr>
     <tr>
