@@ -1,0 +1,5937 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Security and risk management feature helps you quickly identify, track, and address security across your organization by automatically opening time-bound, prioritized findings whenever security problems are detected in your organization repositories, in your connected Jira instance, or as a result of penetration testing.">
+      
+      
+        <meta http-equiv="last-modified" content="2026-01-20 13:49:19">
+      
+      
+        <link rel="canonical" href="https://docs.codacy.com/organizations/managing-security-and-risk/">
+      
+      
+        <meta name="author" content="support@codacy.com (Codacy Support)">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.1.1">
+      
+        <meta property="robots" content="index, follow">
+      
+    
+    
+      
+        <title>Managing security and risk - Codacy docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8604980a.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.936ed772.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/version-select.css">
+    
+    
+    
+      
+        
+<script>!function(){var o=window.analytics=window.analytics||[];if(!o.initialize)if(o.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{o.invoked=!0,o.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"],o.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(t),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var t=o.methods[e];o[t]=o.factory(t)}o.load=function(e,t){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a),o._loadOptions=t},o.SNIPPET_VERSION="4.15.3",o.load("4sT1ml0BeKdR1RtrK5dSQmwxmvcUpYtL"),o.page()}}()</script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managing-security-and-risk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav" aria-label="Header">
+    <a href="https://docs.codacy.com/" title="Codacy docs" class="md-header-nav__button md-logo" aria-label="Codacy docs">
+      
+  <img src="../../assets/images/codacy-docs-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="search-cta-top">
+      
+        <label class="md-header-nav__button md-icon" for="__search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        </label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search documentation" placeholder="Search documentation" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" data-hj-allow>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <a href="https://www.codacy.com/signup" class="cta-btn">Get started</a>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      <main class="md-main" data-md-component="main">
+        
+          
+            <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              <div class="md-sidebar__scrollwrap">
+                <div class="md-sidebar__inner">
+                  <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+  <a href="https://docs.codacy.com/" title="Codacy docs" class="md-header-nav__button md-logo" aria-label="Codacy docs">
+    
+  <img src="../../assets/images/codacy-docs-logo.svg" alt="logo">
+
+  </a>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Documentation home" class="md-nav__link">
+      Documentation home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/codacy-quickstart/" title="Codacy quickstart (5 min)" class="md-nav__link">
+      Codacy quickstart (5 min)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/configuring-your-repository/" title="Configuring your repository" class="md-nav__link">
+      Configuring your repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/integrating-codacy-with-your-git-workflow/" title="Integrating Codacy with your Git workflow" class="md-nav__link">
+      Integrating Codacy with your Git workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Integrating Codacy with your IDE
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Integrating Codacy with your IDE" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Integrating Codacy with your IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/integrating-codacy-with-intellij-ides/" title="Integrating Codacy with IntelliJ IDEs" class="md-nav__link">
+      Integrating Codacy with IntelliJ IDEs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/integrating-codacy-with-visual-studio-code/" title="Integrating Codacy with Visual Studio Code" class="md-nav__link">
+      Integrating Codacy with Visual Studio Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/supported-languages-and-tools/" title="Supported languages and tools" class="md-nav__link">
+      Supported languages and tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/which-permissions-does-codacy-need-from-my-account/" title="Which permissions does Codacy need from my account?" class="md-nav__link">
+      Which permissions does Codacy need from my account?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/adding-a-codacy-badge/" title="Adding a Codacy badge" class="md-nav__link">
+      Adding a Codacy badge
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Codacy Guardrails (IDE Extension)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Codacy Guardrails (IDE Extension)" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Codacy Guardrails (IDE Extension)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-how-to-use/" title="Using Codacy Guardrails" class="md-nav__link">
+      Using Codacy Guardrails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-how-to-configure-rules/" title="How to customize the analysis rules for Codacy Guardrails" class="md-nav__link">
+      How to customize the analysis rules for Codacy Guardrails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-limitations/" title="Limitations" class="md-nav__link">
+      Limitations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-guardrails/codacy-guardrails-faq/" title="FAQs" class="md-nav__link">
+      FAQs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Codacy AI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Codacy AI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Codacy AI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-ai/codacy-ai/" title="Codacy AI" class="md-nav__link">
+      Codacy AI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Repositories on Codacy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Repositories on Codacy" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Repositories on Codacy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/repository-dashboard/" title="Repository Dashboard" class="md-nav__link">
+      Repository Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/commits/" title="Commits page" class="md-nav__link">
+      Commits page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/files/" title="Files page" class="md-nav__link">
+      Files page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/issues/" title="Issues page" class="md-nav__link">
+      Issues page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/coverage/" title="Coverage page" class="md-nav__link">
+      Coverage page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/pull-requests/" title="Pull Requests page" class="md-nav__link">
+      Pull Requests page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Configuring your repositories
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuring your repositories" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuring your repositories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/configuring-code-patterns/" title="Configuring code patterns" class="md-nav__link">
+      Configuring code patterns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/managing-branches/" title="Managing branches" class="md-nav__link">
+      Managing branches
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Managing integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Managing integrations" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Managing integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/integrations/github-integration/" title="GitHub integration" class="md-nav__link">
+      GitHub integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/integrations/gitlab-integration/" title="GitLab integration" class="md-nav__link">
+      GitLab integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/integrations/bitbucket-integration/" title="Bitbucket integration" class="md-nav__link">
+      Bitbucket integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/integrations/post-commit-hooks/" title="Post-commit hooks" class="md-nav__link">
+      Post-commit hooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/ignoring-files/" title="Ignoring files" class="md-nav__link">
+      Ignoring files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/languages/" title="Configuring languages" class="md-nav__link">
+      Configuring languages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/adjusting-quality-gates/" title="Adjusting quality gates" class="md-nav__link">
+      Adjusting quality gates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/adjusting-quality-goals/" title="Adjusting quality goals" class="md-nav__link">
+      Adjusting quality goals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Setting up code coverage
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Setting up code coverage" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Setting up code coverage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../coverage-reporter/" title="Adding coverage to your repository" class="md-nav__link">
+      Adding coverage to your repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../coverage-reporter/alternative-ways-of-running-coverage-reporter/" title="Alternative ways of running Coverage Reporter" class="md-nav__link">
+      Alternative ways of running Coverage Reporter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../coverage-reporter/uploading-coverage-in-advanced-scenarios/" title="Uploading coverage in advanced scenarios" class="md-nav__link">
+      Uploading coverage in advanced scenarios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../coverage-reporter/troubleshooting-coverage-cli-issues/" title="Troubleshooting coverage CLI issues" class="md-nav__link">
+      Troubleshooting coverage CLI issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Local analysis
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Local analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Local analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/client-side-tools/" title="Client-side tools" class="md-nav__link">
+      Client-side tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/running-aligncheck/" title="Running aligncheck" class="md-nav__link">
+      Running aligncheck
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/running-dartanalyzer/" title="Running Dart Analyzer" class="md-nav__link">
+      Running Dart Analyzer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/running-deadcode/" title="Running deadcode" class="md-nav__link">
+      Running deadcode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/running-spotbugs/" title="Running SpotBugs" class="md-nav__link">
+      Running SpotBugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/local-analysis/running-eslint/" title="Running ESLint" class="md-nav__link">
+      Running ESLint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/using-submodules/" title="Using submodules" class="md-nav__link">
+      Using submodules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/codacy-configuration-file/" title="Codacy configuration file" class="md-nav__link">
+      Codacy configuration file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories-configure/removing-your-repository/" title="Removing your repository" class="md-nav__link">
+      Removing your repository
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Organizations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Organizations" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Organizations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../what-are-organizations/" title="What are organizations" class="md-nav__link">
+      What are organizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../organization-overview/" title="Organization overview" class="md-nav__link">
+      Organization overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../managing-repositories/" title="Managing repositories" class="md-nav__link">
+      Managing repositories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../segments/" title="Segments" class="md-nav__link">
+      Segments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../issues-metrics/" title="Issues metrics" class="md-nav__link">
+      Issues metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../codacy-usage/" title="Codacy usage" class="md-nav__link">
+      Codacy usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ai-risk-hub/" title="AI Risk Hub" class="md-nav__link">
+      AI Risk Hub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-gate-policies/" title="Using gate policies" class="md-nav__link">
+      Using gate policies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-coding-standards/" title="Using coding standards" class="md-nav__link">
+      Using coding standards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-10" type="checkbox" id="nav-7-10">
+    
+    <label class="md-nav__link" for="nav-7-10">
+      Managing integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Managing integrations" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Managing integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../integrations/default-git-provider-integration-settings/" title="Default Git provider integration settings" class="md-nav__link">
+      Default Git provider integration settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../integrations/slack-integration/" title="Slack integration for Security issues" class="md-nav__link">
+      Slack integration for Security issues
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../integrations/jira-integration/" title="Jira integration for Security and risk management" class="md-nav__link">
+      Jira integration for Security and risk management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Managing security and risk
+      </label>
+    
+    <a href="./" title="Managing security and risk" class="md-nav__link md-nav__link--active">
+      Managing security and risk
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-list" class="md-nav__link">
+    Findings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-filtered-view" class="md-nav__link">
+    Sharing a filtered view of findings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignoring-findings" class="md-nav__link">
+    Ignoring findings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-the-security-item-list" class="md-nav__link">
+    Exporting findings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reviewing-settings" class="md-nav__link">
+    Reviewing severity rules and integration settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-and-closing-items" class="md-nav__link">
+    How Codacy manages findings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-severities-and-deadlines" class="md-nav__link">
+    Finding severities and deadlines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-statuses" class="md-nav__link">
+    Finding statuses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-security-categories" class="md-nav__link">
+    Supported security categories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-types" class="md-nav__link">
+    Scan types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#languages-checked-for-security-issues" class="md-nav__link">
+    Languages checked for security issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-list" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-scanning" class="md-nav__link">
+    App scanning
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../managing-people/" title="Managing people" class="md-nav__link">
+      Managing people
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../audit-logs-for-organizations/" title="Audit logs for organizations" class="md-nav__link">
+      Audit logs for organizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../roles-and-permissions-for-organizations/" title="Roles and permissions for organizations" class="md-nav__link">
+      Roles and permissions for organizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../changing-your-plan-and-billing/" title="Changing your plan and billing" class="md-nav__link">
+      Changing your plan and billing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Enterprise Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Enterprise Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Enterprise Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enterprise-cloud/github-enterprise-cloud/" title="GitHub Enterprise Cloud" class="md-nav__link">
+      GitHub Enterprise Cloud
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Your account
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Your account" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Your account
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account/managing-your-profile/" title="Managing your profile" class="md-nav__link">
+      Managing your profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account/emails/" title="Emails" class="md-nav__link">
+      Emails
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account/user-session-management/" title="User session management" class="md-nav__link">
+      User session management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Codacy API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Codacy API" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Codacy API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/using-the-codacy-api/" title="Using the Codacy API" class="md-nav__link">
+      Using the Codacy API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/api-tokens/" title="API tokens" class="md-nav__link">
+      API tokens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://api.codacy.com/api/api-docs" title="API v3 reference (recommended)" class="md-nav__link">
+      API v3 reference (recommended)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://api.codacy.com/api-docs" title="API v2 reference" class="md-nav__link">
+      API v2 reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
+    
+    <label class="md-nav__link" for="nav-10-5">
+      Examples
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Examples" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/adding-people-to-codacy-programmatically/" title="Adding people to Codacy programmatically" class="md-nav__link">
+      Adding people to Codacy programmatically
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/adding-repositories-to-codacy-programmatically/" title="Adding repositories to Codacy programmatically" class="md-nav__link">
+      Adding repositories to Codacy programmatically
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/creating-repository-api-tokens-programmatically/" title="Creating repository API tokens programmatically" class="md-nav__link">
+      Creating repository API tokens programmatically
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/obtaining-code-quality-metrics-for-files/" title="Obtaining code quality metrics for files" class="md-nav__link">
+      Obtaining code quality metrics for files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/obtaining-current-issues-in-repositories/" title="Obtaining current issues in repositories" class="md-nav__link">
+      Obtaining current issues in repositories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/identifying-commits-without-coverage-data/" title="Identifying commits without coverage data" class="md-nav__link">
+      Identifying commits without coverage data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/uploading-dast-results/" title="Uploading DAST results to Codacy" class="md-nav__link">
+      Uploading DAST results to Codacy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../codacy-api/examples/triggering-dast-scans/" title="Trigger Dynamic Application Security Testing (DAST) scans" class="md-nav__link">
+      Trigger Dynamic Application Security Testing (DAST) scans
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Managing Codacy Self-hosted
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Managing Codacy Self-hosted" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Managing Codacy Self-hosted
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/" title="Installing Codacy Self-hosted" class="md-nav__link">
+      Installing Codacy Self-hosted
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/requirements/" title="System requirements" class="md-nav__link">
+      System requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-3" type="checkbox" id="nav-11-3">
+    
+    <label class="md-nav__link" for="nav-11-3">
+      Setting up Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Setting up Kubernetes" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Setting up Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/infrastructure/eks-quickstart/" title="Creating an Amazon EKS cluster" class="md-nav__link">
+      Creating an Amazon EKS cluster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/infrastructure/microk8s-quickstart/" title="Creating a MicroK8s cluster" class="md-nav__link">
+      Creating a MicroK8s cluster
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-4" type="checkbox" id="nav-11-4">
+    
+    <label class="md-nav__link" for="nav-11-4">
+      Configuring Codacy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuring Codacy" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuring Codacy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-4-1" type="checkbox" id="nav-11-4-1">
+    
+    <label class="md-nav__link" for="nav-11-4-1">
+      Integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Integrations" data-md-level="3">
+      <label class="md-nav__title" for="nav-11-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/github-cloud/" title="GitHub Cloud" class="md-nav__link">
+      GitHub Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/github-enterprise/" title="GitHub Enterprise" class="md-nav__link">
+      GitHub Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/github-app-create/" title="Creating a GitHub App" class="md-nav__link">
+      Creating a GitHub App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/gitlab-cloud/" title="GitLab Cloud" class="md-nav__link">
+      GitLab Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/gitlab-enterprise/" title="GitLab Enterprise" class="md-nav__link">
+      GitLab Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/bitbucket-cloud/" title="Bitbucket Cloud" class="md-nav__link">
+      Bitbucket Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/bitbucket-server/" title="Bitbucket Server" class="md-nav__link">
+      Bitbucket Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/integrations/email/" title="SMTP server" class="md-nav__link">
+      SMTP server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/caching/" title="Caching" class="md-nav__link">
+      Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/monitoring/" title="Monitoring" class="md-nav__link">
+      Monitoring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/configuration/logging/" title="Logging" class="md-nav__link">
+      Logging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-5" type="checkbox" id="nav-11-5">
+    
+    <label class="md-nav__link" for="nav-11-5">
+      Maintenance and operations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Maintenance and operations" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Maintenance and operations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/maintenance/license/" title="Updating your Codacy license" class="md-nav__link">
+      Updating your Codacy license
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/maintenance/upgrade/" title="Upgrading Codacy" class="md-nav__link">
+      Upgrading Codacy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/maintenance/uninstall/" title="Uninstalling Codacy" class="md-nav__link">
+      Uninstalling Codacy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/maintenance/database/" title="Database migration guide" class="md-nav__link">
+      Database migration guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11-6" type="checkbox" id="nav-11-6">
+    
+    <label class="md-nav__link" for="nav-11-6">
+      Troubleshooting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Troubleshooting" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/troubleshoot/troubleshoot/" title="Troubleshooting Codacy Self-hosted" class="md-nav__link">
+      Troubleshooting Codacy Self-hosted
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/troubleshoot/logs-collect/" title="Collecting logs for Support" class="md-nav__link">
+      Collecting logs for Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chart/troubleshoot/k8s-cheatsheet/" title="Kubernetes cheatsheet" class="md-nav__link">
+      Kubernetes cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting and FAQs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Troubleshooting and FAQs" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Troubleshooting and FAQs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-1" type="checkbox" id="nav-12-1">
+    
+    <label class="md-nav__link" for="nav-12-1">
+      General
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="General" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/which-platforms-and-technologies-does-codacy-support/" title="Which platforms and technologies does Codacy support?" class="md-nav__link">
+      Which platforms and technologies does Codacy support?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-support-github-enterprise/" title="How does Codacy support GitHub Enterprise Cloud?" class="md-nav__link">
+      How does Codacy support GitHub Enterprise Cloud?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-support-gitlab-cloud/" title="How does Codacy support GitLab Cloud?" class="md-nav__link">
+      How does Codacy support GitLab Cloud?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-support-gitlab-enterprise/" title="How does Codacy support GitLab Enterprise?" class="md-nav__link">
+      How does Codacy support GitLab Enterprise?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-support-bitbucket-cloud/" title="How does Codacy support Bitbucket Cloud?" class="md-nav__link">
+      How does Codacy support Bitbucket Cloud?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-support-bitbucket-server/" title="How does Codacy support Bitbucket Server?" class="md-nav__link">
+      How does Codacy support Bitbucket Server?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-keep-my-data-secure/" title="How does Codacy keep my data secure?" class="md-nav__link">
+      How does Codacy keep my data secure?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-does-codacy-protect-my-privacy/" title="How does Codacy protect my privacy?" class="md-nav__link">
+      How does Codacy protect my privacy?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/does-codacy-keep-audit-logs/" title="Does Codacy keep audit logs for my organization?" class="md-nav__link">
+      Does Codacy keep audit logs for my organization?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-do-i-allowlist-codacy-cloud-on-my-git-provider/" title="How do I allowlist Codacy Cloud on my Git provider?" class="md-nav__link">
+      How do I allowlist Codacy Cloud on my Git provider?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/general/how-can-i-change-or-cancel-my-plan/" title="How can I change or cancel my plan?" class="md-nav__link">
+      How can I change or cancel my plan?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-2" type="checkbox" id="nav-12-2">
+    
+    <label class="md-nav__link" for="nav-12-2">
+      Repositories
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Repositories" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Repositories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/repositories/how-do-i-reanalyze-my-repository/" title="How do I reanalyze my repository?" class="md-nav__link">
+      How do I reanalyze my repository?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/repositories/i-renamed-my-repository-on-the-git-provider/" title="I renamed my repository on the Git provider" class="md-nav__link">
+      I renamed my repository on the Git provider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/repositories/i-moved-my-repository-on-the-git-provider/" title="I moved my repository on the Git provider" class="md-nav__link">
+      I moved my repository on the Git provider
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-3" type="checkbox" id="nav-12-3">
+    
+    <label class="md-nav__link" for="nav-12-3">
+      Code analysis
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Code analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Code analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/which-metrics-does-codacy-calculate/" title="Which metrics does Codacy calculate?" class="md-nav__link">
+      Which metrics does Codacy calculate?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/why-does-codacy-show-unexpected-coverage-changes/" title="Why does Codacy show unexpected coverage changes?" class="md-nav__link">
+      Why does Codacy show unexpected coverage changes?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/does-codacy-place-limits-on-the-code-analysis/" title="Does Codacy place limits on the code analysis?" class="md-nav__link">
+      Does Codacy place limits on the code analysis?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/does-codacy-check-for-dependencies/" title="Does Codacy check for dependencies?" class="md-nav__link">
+      Does Codacy check for dependencies?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/how-long-does-it-take-for-my-repository-to-be-analyzed/" title="How long does it take for my repository to be analyzed?" class="md-nav__link">
+      How long does it take for my repository to be analyzed?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/how-to-skip-an-analysis/" title="How to skip an analysis?" class="md-nav__link">
+      How to skip an analysis?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/can-i-bypass-codacy-status-check/" title="Can I bypass Codacy status check?" class="md-nav__link">
+      Can I bypass Codacy status check?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/code-analysis/how-to-configure-php-codesniffer-coding-standards/" title="How to configure PHP_CodeSniffer coding standards?" class="md-nav__link">
+      How to configure PHP_CodeSniffer coding standards?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12-4" type="checkbox" id="nav-12-4">
+    
+    <label class="md-nav__link" for="nav-12-4">
+      Troubleshooting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Troubleshooting" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/why-cant-i-see-my-organization/" title="Why can't I see my organization?" class="md-nav__link">
+      Why can't I see my organization?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/why-did-codacy-stop-commenting-on-pull-requests/" title="Why did Codacy stop commenting on pull requests?" class="md-nav__link">
+      Why did Codacy stop commenting on pull requests?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/why-arent-duplication-metrics-being-calculated/" title="Why aren't duplication metrics being calculated?" class="md-nav__link">
+      Why aren't duplication metrics being calculated?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/why-isnt-my-public-repository-being-analyzed/" title="Why isn't my public repository being analyzed?" class="md-nav__link">
+      Why isn't my public repository being analyzed?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/not-a-member-of-the-organization/" title="Not a member of the organization" class="md-nav__link">
+      Not a member of the organization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/we-no-longer-have-access-to-this-repository/" title="We no longer have access to this repository, check your SSH keys" class="md-nav__link">
+      We no longer have access to this repository, check your SSH keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/why-is-my-file-over-150-kb-missing/" title="Why is my file over 150 KB missing?" class="md-nav__link">
+      Why is my file over 150 KB missing?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/troubleshooting/error-line-endings/" title="Error caused by incompatible line endings" class="md-nav__link">
+      Error caused by incompatible line endings
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Release notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Release notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Codacy release notes" class="md-nav__link">
+      Codacy release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cloud" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-1" type="checkbox" id="nav-13-2-1">
+    
+    <label class="md-nav__link" for="nav-13-2-1">
+      2026
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2026" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2026
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2026-01/" title="Cloud January 2026" class="md-nav__link">
+      Cloud January 2026
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2026-01-adding-golangci-lint/" title="Adding GolangCI-Lint as new supported tool – January 2026" class="md-nav__link">
+      Adding GolangCI-Lint as new supported tool – January 2026
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-2" type="checkbox" id="nav-13-2-2">
+    
+    <label class="md-nav__link" for="nav-13-2-2">
+      2025
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2025" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2025
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-12/" title="Cloud December 2025" class="md-nav__link">
+      Cloud December 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-11/" title="Cloud November 2025" class="md-nav__link">
+      Cloud November 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-10/" title="Cloud October 2025" class="md-nav__link">
+      Cloud October 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-09/" title="Cloud September 2025" class="md-nav__link">
+      Cloud September 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-08/" title="Cloud August 2025" class="md-nav__link">
+      Cloud August 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-07/" title="Cloud July 2025" class="md-nav__link">
+      Cloud July 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-06/" title="Cloud June 2025" class="md-nav__link">
+      Cloud June 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-06-adding-sqlfluff-reek/" title="Adding SQLFluff and Reek as new supported tools June, 2025" class="md-nav__link">
+      Adding SQLFluff and Reek as new supported tools June, 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-05/" title="Cloud May 2025" class="md-nav__link">
+      Cloud May 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-04/" title="Cloud April 2025" class="md-nav__link">
+      Cloud April 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-03/" title="Cloud March 2025" class="md-nav__link">
+      Cloud March 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-02-adding-ruff-lizard/" title="Adding Lizard and Ruff as new supported tools February, 2025" class="md-nav__link">
+      Adding Lizard and Ruff as new supported tools February, 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-02/" title="Cloud February 2025" class="md-nav__link">
+      Cloud February 2025
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2025-01/" title="Cloud January 2025" class="md-nav__link">
+      Cloud January 2025
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-3" type="checkbox" id="nav-13-2-3">
+    
+    <label class="md-nav__link" for="nav-13-2-3">
+      2024
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2024" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2024
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-12/" title="Cloud December 2024" class="md-nav__link">
+      Cloud December 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-11/" title="Cloud November 2024" class="md-nav__link">
+      Cloud November 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-10/" title="Cloud October 2024" class="md-nav__link">
+      Cloud October 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-09/" title="Cloud September 2024" class="md-nav__link">
+      Cloud September 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-09-adding-eslint9-and-pmd7/" title="Adding ESLint 9 and PMD 7 as new supported tools September, 2024" class="md-nav__link">
+      Adding ESLint 9 and PMD 7 as new supported tools September, 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-08/" title="Cloud August 2024" class="md-nav__link">
+      Cloud August 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-07/" title="Cloud July 2024" class="md-nav__link">
+      Cloud July 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-06/" title="Cloud June 2024" class="md-nav__link">
+      Cloud June 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-05/" title="Cloud May 2024" class="md-nav__link">
+      Cloud May 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-04/" title="Cloud April 2024" class="md-nav__link">
+      Cloud April 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-03/" title="Cloud March 2024" class="md-nav__link">
+      Cloud March 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-02/" title="Cloud February 2024" class="md-nav__link">
+      Cloud February 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-01/" title="Cloud January 2024" class="md-nav__link">
+      Cloud January 2024
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2024-01-15-gh-repository-ssh-keys-discontinuation/" title="Discontinuation of SSH keys for GitHub repositories January 15, 2024" class="md-nav__link">
+      Discontinuation of SSH keys for GitHub repositories January 15, 2024
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-4" type="checkbox" id="nav-13-2-4">
+    
+    <label class="md-nav__link" for="nav-13-2-4">
+      2023
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2023" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2023
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-12/" title="Cloud December 2023" class="md-nav__link">
+      Cloud December 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-11/" title="Cloud November 2023" class="md-nav__link">
+      Cloud November 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-11-23-new-coverage-engine-status-checks/" title="Rollout of new Coverage engine November 23, 2023" class="md-nav__link">
+      Rollout of new Coverage engine November 23, 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-11-13-jira-slack-webhooks-repo-integrations-removal/" title="Removal of Jira, Slack, and Webhooks repository integrations November 13, 2023" class="md-nav__link">
+      Removal of Jira, Slack, and Webhooks repository integrations November 13, 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-10/" title="Cloud October 2023" class="md-nav__link">
+      Cloud October 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-10-25-csslint-jshint-fauxpas-tailor-tslint-deprecation/" title="Deprecation of CSSLint, JSHint, Faux Pas, Tailor, TSLint October 25, 2023" class="md-nav__link">
+      Deprecation of CSSLint, JSHint, Faux Pas, Tailor, TSLint October 25, 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-10-13-bundler-audit-deprecation/" title="Deprecation of bundler-audit October 13, 2023" class="md-nav__link">
+      Deprecation of bundler-audit October 13, 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-09/" title="Cloud September 2023" class="md-nav__link">
+      Cloud September 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-08/" title="Cloud August 2023" class="md-nav__link">
+      Cloud August 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-07/" title="Cloud July 2023" class="md-nav__link">
+      Cloud July 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-06/" title="Cloud June 2023" class="md-nav__link">
+      Cloud June 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-05/" title="Cloud May 2023" class="md-nav__link">
+      Cloud May 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-04/" title="Cloud April 2023" class="md-nav__link">
+      Cloud April 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-03/" title="Cloud March 2023" class="md-nav__link">
+      Cloud March 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-02/" title="Cloud February 2023" class="md-nav__link">
+      Cloud February 2023
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2023-01/" title="Cloud January 2023" class="md-nav__link">
+      Cloud January 2023
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-5" type="checkbox" id="nav-13-2-5">
+    
+    <label class="md-nav__link" for="nav-13-2-5">
+      2022
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2022" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2022
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-12/" title="Cloud December 2022" class="md-nav__link">
+      Cloud December 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-11/" title="Cloud November 2022" class="md-nav__link">
+      Cloud November 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-10/" title="Cloud October 2022" class="md-nav__link">
+      Cloud October 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-09/" title="Cloud September 2022" class="md-nav__link">
+      Cloud September 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-08/" title="Cloud August 2022" class="md-nav__link">
+      Cloud August 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-07/" title="Cloud July 2022" class="md-nav__link">
+      Cloud July 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-06/" title="Cloud June 2022" class="md-nav__link">
+      Cloud June 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-05/" title="Cloud May 2022" class="md-nav__link">
+      Cloud May 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-04/" title="Cloud April 2022" class="md-nav__link">
+      Cloud April 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-03/" title="Cloud March 2022" class="md-nav__link">
+      Cloud March 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-03-31-adding-eslint8/" title="Adding ESLint 8 as a supported tool March 31, 2022" class="md-nav__link">
+      Adding ESLint 8 as a supported tool March 31, 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-02/" title="Cloud February 2022" class="md-nav__link">
+      Cloud February 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-02-16-pmd-legacy-removal/" title="Removal of PMD (Legacy) February 16, 2022" class="md-nav__link">
+      Removal of PMD (Legacy) February 16, 2022
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2022-01/" title="Cloud January 2022" class="md-nav__link">
+      Cloud January 2022
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-6" type="checkbox" id="nav-13-2-6">
+    
+    <label class="md-nav__link" for="nav-13-2-6">
+      2021
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2021" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2021
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-12/" title="Cloud December 2021" class="md-nav__link">
+      Cloud December 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-11/" title="Cloud November 2021" class="md-nav__link">
+      Cloud November 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-10/" title="Cloud October 2021" class="md-nav__link">
+      Cloud October 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-09/" title="Cloud September 2021" class="md-nav__link">
+      Cloud September 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-11-02-legacy-organizations/" title="End of support for legacy manual organizations November 2, 2021" class="md-nav__link">
+      End of support for legacy manual organizations November 2, 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-08/" title="Cloud August 2021" class="md-nav__link">
+      Cloud August 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2021-07-03-scheduled-db-maintenance/" title="Performing scheduled database maintenance July 3, 2021" class="md-nav__link">
+      Performing scheduled database maintenance July 3, 2021
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-7" type="checkbox" id="nav-13-2-7">
+    
+    <label class="md-nav__link" for="nav-13-2-7">
+      2020
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2020" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2020
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2020-04-01-deprecating-http-headers-for-api-tokens/" title="Deprecating HTTP headers for API tokens April 1, 2020" class="md-nav__link">
+      Deprecating HTTP headers for API tokens April 1, 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2020-03-09-nodesecurity-golint-scsslint-removal/" title="Removal of NodeSecurity, GoLint, and SCSSLint March 9, 2020" class="md-nav__link">
+      Removal of NodeSecurity, GoLint, and SCSSLint March 9, 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2020-02-github-apps/" title="Codacy now supports GitHub Apps February 2020" class="md-nav__link">
+      Codacy now supports GitHub Apps February 2020
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-8" type="checkbox" id="nav-13-2-8">
+    
+    <label class="md-nav__link" for="nav-13-2-8">
+      2019
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2019" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-11-15/" title="Cloud November 15, 2019" class="md-nav__link">
+      Cloud November 15, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-10-30/" title="Cloud October 30, 2019" class="md-nav__link">
+      Cloud October 30, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-09-05/" title="Cloud September 5, 2019" class="md-nav__link">
+      Cloud September 5, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-08-07/" title="Cloud August 7, 2019" class="md-nav__link">
+      Cloud August 7, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-06-18/" title="Cloud June 18, 2019" class="md-nav__link">
+      Cloud June 18, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-05-20/" title="Cloud May 20, 2019" class="md-nav__link">
+      Cloud May 20, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-05-05/" title="Cloud May 5, 2019" class="md-nav__link">
+      Cloud May 5, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-04-08/" title="Cloud April 8, 2019" class="md-nav__link">
+      Cloud April 8, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-03-29/" title="Cloud March 29, 2019" class="md-nav__link">
+      Cloud March 29, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-02-18-bitbucket-changes/" title="Bitbucket changes February 18, 2019" class="md-nav__link">
+      Bitbucket changes February 18, 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2019-01-02/" title="Cloud January 2, 2019" class="md-nav__link">
+      Cloud January 2, 2019
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-2-9" type="checkbox" id="nav-13-2-9">
+    
+    <label class="md-nav__link" for="nav-13-2-9">
+      2018
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="2018" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-2-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2018-11-16/" title="Cloud November 16, 2018" class="md-nav__link">
+      Cloud November 16, 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2018-11-02/" title="Cloud November 2, 2018" class="md-nav__link">
+      Cloud November 2, 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2018-10-19/" title="Cloud October 19, 2018" class="md-nav__link">
+      Cloud October 19, 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/cloud/cloud-2018-07-23/" title="Cloud July 23, 2018" class="md-nav__link">
+      Cloud July 23, 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Self-hosted
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Self-hosted" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Self-hosted
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-1" type="checkbox" id="nav-13-3-1">
+    
+    <label class="md-nav__link" for="nav-13-3-1">
+      v16
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v16" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v16
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v16.0.0/" title="Self-hosted v16.0.0" class="md-nav__link">
+      Self-hosted v16.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-2" type="checkbox" id="nav-13-3-2">
+    
+    <label class="md-nav__link" for="nav-13-3-2">
+      v15
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v15" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v15
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v15.0.0/" title="Self-hosted v15.0.0" class="md-nav__link">
+      Self-hosted v15.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-3" type="checkbox" id="nav-13-3-3">
+    
+    <label class="md-nav__link" for="nav-13-3-3">
+      v14
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v14" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v14
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v14.1.1/" title="Self-hosted v14.1.1" class="md-nav__link">
+      Self-hosted v14.1.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v14.0.0/" title="Self-hosted v14.0.0" class="md-nav__link">
+      Self-hosted v14.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-4" type="checkbox" id="nav-13-3-4">
+    
+    <label class="md-nav__link" for="nav-13-3-4">
+      v13
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v13" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v13
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v13.0.0/" title="Self-hosted v13.0.0" class="md-nav__link">
+      Self-hosted v13.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-5" type="checkbox" id="nav-13-3-5">
+    
+    <label class="md-nav__link" for="nav-13-3-5">
+      v12
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v12" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v12
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v12.0.0/" title="Self-hosted v12.0.0" class="md-nav__link">
+      Self-hosted v12.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-6" type="checkbox" id="nav-13-3-6">
+    
+    <label class="md-nav__link" for="nav-13-3-6">
+      v11
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v11" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v11
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v11.0.0/" title="Self-hosted v11.0.0" class="md-nav__link">
+      Self-hosted v11.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-7" type="checkbox" id="nav-13-3-7">
+    
+    <label class="md-nav__link" for="nav-13-3-7">
+      v10
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v10" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v10
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v10.0.0/" title="Self-hosted v10.0.0" class="md-nav__link">
+      Self-hosted v10.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-8" type="checkbox" id="nav-13-3-8">
+    
+    <label class="md-nav__link" for="nav-13-3-8">
+      v9
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v9" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v9
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v9.0.0/" title="Self-hosted v9.0.0" class="md-nav__link">
+      Self-hosted v9.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-9" type="checkbox" id="nav-13-3-9">
+    
+    <label class="md-nav__link" for="nav-13-3-9">
+      v8
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v8" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v8
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v8.1.0/" title="Self-hosted v8.1.0" class="md-nav__link">
+      Self-hosted v8.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v8.0.0/" title="Self-hosted v8.0.0" class="md-nav__link">
+      Self-hosted v8.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-10" type="checkbox" id="nav-13-3-10">
+    
+    <label class="md-nav__link" for="nav-13-3-10">
+      v7
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v7" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v7
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v7.0.0/" title="Self-hosted v7.0.0" class="md-nav__link">
+      Self-hosted v7.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-11" type="checkbox" id="nav-13-3-11">
+    
+    <label class="md-nav__link" for="nav-13-3-11">
+      v6
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v6" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v6.0.0/" title="Self-hosted v6.0.0" class="md-nav__link">
+      Self-hosted v6.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-12" type="checkbox" id="nav-13-3-12">
+    
+    <label class="md-nav__link" for="nav-13-3-12">
+      v5
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v5" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v5.1.0/" title="Self-hosted v5.1.0" class="md-nav__link">
+      Self-hosted v5.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v5.0.0/" title="Self-hosted v5.0.0" class="md-nav__link">
+      Self-hosted v5.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-13" type="checkbox" id="nav-13-3-13">
+    
+    <label class="md-nav__link" for="nav-13-3-13">
+      v4
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v4" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.4.0/" title="Self-hosted v4.4.0" class="md-nav__link">
+      Self-hosted v4.4.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.3.0/" title="Self-hosted v4.3.0" class="md-nav__link">
+      Self-hosted v4.3.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.2.0/" title="Self-hosted v4.2.0" class="md-nav__link">
+      Self-hosted v4.2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.1.0/" title="Self-hosted v4.1.0" class="md-nav__link">
+      Self-hosted v4.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.0.1/" title="Self-hosted v4.0.1" class="md-nav__link">
+      Self-hosted v4.0.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v4.0.0/" title="Self-hosted v4.0.0" class="md-nav__link">
+      Self-hosted v4.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-14" type="checkbox" id="nav-13-3-14">
+    
+    <label class="md-nav__link" for="nav-13-3-14">
+      v3
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v3" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.5.1/" title="Self-hosted v3.5.1" class="md-nav__link">
+      Self-hosted v3.5.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.5.0/" title="Self-hosted v3.5.0" class="md-nav__link">
+      Self-hosted v3.5.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.4.0/" title="Self-hosted v3.4.0" class="md-nav__link">
+      Self-hosted v3.4.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.3.0/" title="Self-hosted v3.3.0" class="md-nav__link">
+      Self-hosted v3.3.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.2.0/" title="Self-hosted v3.2.0" class="md-nav__link">
+      Self-hosted v3.2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.1.0/" title="Self-hosted v3.1.0" class="md-nav__link">
+      Self-hosted v3.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v3.0.0/" title="Self-hosted v3.0.0" class="md-nav__link">
+      Self-hosted v3.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-15" type="checkbox" id="nav-13-3-15">
+    
+    <label class="md-nav__link" for="nav-13-3-15">
+      v2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v2" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-15">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v2.2.1/" title="Self-hosted v2.2.1" class="md-nav__link">
+      Self-hosted v2.2.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v2.2.0/" title="Self-hosted v2.2.0" class="md-nav__link">
+      Self-hosted v2.2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v2.1.1/" title="Self-hosted v2.1.1" class="md-nav__link">
+      Self-hosted v2.1.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v2.1.0/" title="Self-hosted v2.1.0" class="md-nav__link">
+      Self-hosted v2.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v2.0.0/" title="Self-hosted v2.0.0" class="md-nav__link">
+      Self-hosted v2.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13-3-16" type="checkbox" id="nav-13-3-16">
+    
+    <label class="md-nav__link" for="nav-13-3-16">
+      v1
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="v1" data-md-level="3">
+      <label class="md-nav__title" for="nav-13-3-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        v1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.5.0/" title="Self-hosted v1.5.0" class="md-nav__link">
+      Self-hosted v1.5.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.4.0/" title="Self-hosted v1.4.0" class="md-nav__link">
+      Self-hosted v1.4.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.3.0/" title="Self-hosted v1.3.0" class="md-nav__link">
+      Self-hosted v1.3.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.2.0/" title="Self-hosted v1.2.0" class="md-nav__link">
+      Self-hosted v1.2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.1.0/" title="Self-hosted v1.1.0" class="md-nav__link">
+      Self-hosted v1.1.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.0.1/" title="Self-hosted v1.0.1" class="md-nav__link">
+      Self-hosted v1.0.1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/self-hosted/self-hosted-v1.0.0/" title="Self-hosted v1.0.0" class="md-nav__link">
+      Self-hosted v1.0.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../special-thanks/" title="Special thanks" class="md-nav__link">
+      Special thanks
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          
+        
+        <div class="md-main__inner">
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+              
+              
+                
+                  
+                
+                
+                <h1 id="managing-security-and-risk">Managing security and risk<a class="headerlink" href="#managing-security-and-risk" title="Permanent link">#</a></h1>
+<p>The Security and risk management feature helps you <span class="skip-vale">quickly</span> identify, track, and address security across your organization by automatically opening time-bound, prioritized findings whenever security problems are detected in your organization repositories, in your <a href="../integrations/jira-integration/">connected Jira instance</a>, or <span class="skip-vale">as a result of</span> <a href="https://www.codacy.com/security">penetration testing</a>.</p>
+<p>Under Security and risk management, you can find the following pages to help you monitor the security of your repositories:</p>
+<ul>
+<li><a href="#dashboard">Overview</a></li>
+<li><a href="#item-list">Findings</a></li>
+<li><a href="#dependencies-list">Dependencies</a></li>
+</ul>
+<p>In addition, on these pages, you can <a href="#sharing-filtered-view">share filtered views of findings</a>, <a href="#exporting-the-security-item-list">export findings as a CSV file</a>, and <a href="#reviewing-settings">review severity rules and integration settings</a></p>
+<h2 id="dashboard">Overview<a class="headerlink" href="#dashboard" title="Permanent link">#</a></h2>
+<p>The <strong>Security and risk management overview</strong> page provides a high-level view of the security posture of your organization, including the number of open findings, the distribution of open findings by severity, the history of finding resolution, and a breakdown of the most high-risk repositories and most detected security categories.</p>
+<p>Use this page to assess your organization's security posture and its progress over time, identify areas for improvement, and share findings with stakeholders.</p>
+<p>To access the overview page, select an organization from the top navigation bar and select <strong>Security and risk</strong> on the left navigation sidebar.</p>
+<p><img alt="Security and risk management overview page" src="../images/security-risk-management-overview.png" /></p>
+<p>The overview page includes six panels:</p>
+<ul>
+<li><a href="#open-findings-overview">Open findings overview</a></li>
+<li><a href="#scan-types-distribution">Scan types distribution</a></li>
+<li><a href="#open-findings-history">Open findings history</a></li>
+<li><a href="#activity-history">Activity history</a></li>
+<li><a href="#top-10-high-risk-repositories">Top 10 high-risk repositories</a></li>
+<li><a href="#top-10-common-security-categories">Top 10 common security categories</a></li>
+</ul>
+<p>To limit the information displayed in each panel, use the filter drop-down above the main area, and choose the relevant repositories, or utilise <a href="../segments"><strong>Segments</strong></a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Check out how to <a href="../segments/#enabling-segments">enable and configure <strong>Segments</strong></a></p>
+</div>
+<h3 id="open-findings-overview">Open findings overview<a class="headerlink" href="#open-findings-overview" title="Permanent link">#</a></h3>
+<p>The <strong>Open findings overview</strong> panel displays the total number of open security findings and the number of findings of each severity, helping you quickly assess the overall security posture of your organization and <span class="skip-vale">quickly</span> review findings that are critical or overdue.</p>
+<p>Within this same panel, an additional visualization shows the relative distribution of open findings by status, helping you evaluate the distribution of risk across different criteria and identify areas that may need immediate attention.</p>
+<p>To access the findings page with the corresponding filter applied, click on a number or bar area.</p>
+<p><img alt="Security and risk management open findings overview panel" src="../images/security-risk-management-overview-distribution.png" /></p>
+<h3 id="scan-types-distribution">Scan types distribution<a class="headerlink" href="#scan-types-distribution" title="Permanent link">#</a></h3>
+<p>The <strong>Scan types</strong> panel shows the relative distribution of open findings by scan type. To access the findings page with the corresponding filter applied, click on a number from the panel.</p>
+<p><img alt="Security and risk management scan types distribution panel" src="../images/security-risk-management-scan-type-distribution.png" /></p>
+<h3 id="open-findings-history">Open findings history<a class="headerlink" href="#open-findings-history" title="Permanent link">#</a></h3>
+<p>The <strong>Open findings history</strong> graph shows the open findings trends over the past three months, grouped by week and severity. It details the progression of your organization's risk and security posture over time and can, for example, help you understand if the right issues are being addressed.</p>
+<p>For a detailed view of the distribution on a specific week, hover over the graph.</p>
+<p><img alt="Security and risk management open findings history panel" src="../images/security-risk-management-overview-history-open.png" /></p>
+<h3 id="activity-history">Activity history<a class="headerlink" href="#activity-history" title="Permanent link">#</a></h3>
+<p>The <strong>Activity history</strong> graph shows weekly counts of open, closed, ignored and unignored findings over the past three months, overlaid on the overall open findings trend. It complements the <strong>Open findings history</strong> graph with more information, such as the volume of findings addressed each week and a visual representation of the new/closed ratio.</p>
+<p>To filter the graph by finding severity, use the drop-down in the top right-hand corner of the panel.</p>
+<p>For a detailed view of the counts on a specific week, hover over the graph.</p>
+<p><img alt="Security and risk management activity history panel" src="../images/security-risk-management-overview-history-activity.png" /></p>
+<h3 id="top-10-high-risk-repositories">Top 10 high-risk repositories<a class="headerlink" href="#top-10-high-risk-repositories" title="Permanent link">#</a></h3>
+<p>The <strong>Top 10 high-risk repositories</strong> list shows the repositories with the highest number of open findings, ordered by severity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This panel may list fewer than ten repositories if there are fewer than ten repositories with open findings in the organization or if fewer than ten repositories are selected in the dropdown <strong>Repository</strong> filter.</p>
+</div>
+<p><img alt="Security and risk management high risk repositories panel" src="../images/security-risk-management-overview-top-risk.png" /></p>
+<h3 id="top-10-common-security-categories">Top 10 common security categories<a class="headerlink" href="#top-10-common-security-categories" title="Permanent link">#</a></h3>
+<p>The <strong>Top 10 common security categories</strong> list shows the most common security categories of open findings, ordered by count.</p>
+<p>To access the findings page with the corresponding filter applied, click on a category.</p>
+<p><img alt="Security and risk management top categories panel" src="../images/security-risk-management-overview-top-categories.png" /></p>
+<h2 id="item-list">Findings<a class="headerlink" href="#item-list" title="Permanent link">#</a></h2>
+<p>The <strong>Security and risk management findings</strong> page displays a filtered list of findings. By default, you are shown the findings that are currently opened and this list is sorted by <strong>Latest findings</strong> found. You can click on the sort dropdown to sort the findings by detection date - latest or oldest. Use this page to review and prioritize findings and track the progress of your security efforts.</p>
+<p>To access the findings page, access the <a href="#dashboard">overview page</a> and click the <strong>Findings</strong> tab.</p>
+<p><img alt="Security and risk management findings page" src="../images/security-risk-management-findings.png" /></p>
+<p>On the left section of the page, besides sorting, you can update the filtering criteria by clicking the  <a href="../segments"><strong>Segments</strong></a> , <strong>Repositories</strong>, <strong>Severities</strong>, <strong>Statuses</strong>,  <strong>Security categories</strong>, or <strong>Scan types</strong> dropdowns above the list.</p>
+<div class="admonition info">
+<p class="admonition-title">Check out how to <a href="../segments/#enabling-segments">enable and configure <strong>Segments</strong></a></p>
+</div>
+<p>On the right section, you can view the filtered list of findings. Each finding card offers a quick overview of the vulnerability found, including its title, <a href="#opening-and-closing-items">source platform</a>, <a href="#scan-types">scan type</a>, <a href="#supported-security-categories">security category</a>, and related information such as the repository name, Jira issue key, or affected URL targets. To find out more, click this overview to navigate to the finding details on the source platform.</p>
+<p><img alt="Security and risk management finding page" src="../images/security-risk-management-finding-details.png" /></p>
+<p>The same Common Vulnerability and Exposure can be classified with different severities in different sources, like cve.org or NVD, and Trivy uses these and other sources to update their database. As such, there may be situations where the severity attributed to a Finding by Trivy is not in line with a specific source. Subsequent analysis can then close a Finding and re-open it with a different severity, if a Trivy database update occurs.</p>
+<h2 id="sharing-filtered-view">Sharing a filtered view of findings<a class="headerlink" href="#sharing-filtered-view" title="Permanent link">#</a></h2>
+<p>To share the current view of the overview or findings page, click the <strong>Copy URL</strong> button in the top right-hand corner of the page. This action copies the URL with the current filters applied to the clipboard.</p>
+<div class="admonition important">
+<p class="admonition-title"> <a href="../segments"><strong>Segments</strong></a> filter won't be considered when sharing the filtered view</p>
+</div>
+<h2 id="ignoring-findings">Ignoring findings<a class="headerlink" href="#ignoring-findings" title="Permanent link">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">This feature is available only to organization admins and organization managers except for findings detected on <a href="#opening-and-closing-items">Git repositories</a>. For those findings, <a href="../../repositories/issues/#ignoring-and-managing-issues">repository permissions are respected</a></p>
+</div>
+<p>You can ignore a finding using the context menu both in the findings list page and the findings details page. When ignoring a finding you can optionally specify a reason for doing so.</p>
+<p><img alt="Security and risk management finding ignore" src="../images/security-risk-management-finding-ignore.png" /></p>
+<p>From an organization standpoint, ignoring a finding means that you accept the risk it poses and you're not planning on addressing the issue.</p>
+<p>From Codacy's standpoint, ignoring a finding means it will be removed from the metrics featured in the <a href="#dashboard">overview page</a> page. Note that the <a href="#open-findings-history">Open Findings history</a> chart will only be changed at the start of next week.</p>
+<div class="admonition info">
+<p class="admonition-title"><a href="../integrations/jira-integration/">Jira</a> findings can't be ignored in Codacy. You should closed the issue directly in Jira.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Ignoring findings detected on <a href="#opening-and-closing-items">Git repositories</a> will also <a href="../../repositories/issues/#ignoring-and-managing-issues">ignore the issue at the repository level</a>.</p>
+</div>
+<p>You can still see <strong>Ignored</strong> findings in the <a href="#item-list">findings list</a>, by filtering for the <strong>Ignored</strong> status in the <strong>Statuses</strong> dropdown. You can assess which status a finding has at his overview, on the right top corner.</p>
+<p><img alt="Security and risk management finding unignore list" src="../images/security-risk-management-finding-unignore-list.png" /></p>
+<p>An Ignored finding can be <strong>unignored</strong> directly from the <a href="#item-list">findings list</a> or by going to the same menu in the finding details page. Note that in this page you can also find out more about who ignored the finding and why, if such a reason was provided.</p>
+<p>Unignoring a finding reverts the effects of ignoring it.</p>
+<p><img alt="Security and risk management finding unignore" src="../images/security-risk-management-finding-unignore.png" /></p>
+<div class="admonition important">
+<p class="admonition-title">Unignoring findings detected on <a href="#opening-and-closing-items">Git repositories</a> will also <a href="../../repositories/issues/#ignoring-and-managing-issues">unignore the issue at the repository level</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Ignoring and unignoring findings are <a href="../audit-logs-for-organizations/#organization">auditable actions</a>.</p>
+</div>
+<h2 id="exporting-the-security-item-list">Exporting findings<a class="headerlink" href="#exporting-the-security-item-list" title="Permanent link">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">This feature is available only to organization admins and organization managers</p>
+</div>
+<p>To export a list of findings as a CSV file, click the options menu in the top right-hand corner of the page and select <strong>Export findings (.csv)</strong>. The exported list always includes all findings, ignoring any applied filters.</p>
+<h2 id="reviewing-settings">Reviewing severity rules and integration settings<a class="headerlink" href="#reviewing-settings" title="Permanent link">#</a></h2>
+<p>To <a href="#item-severities-and-deadlines">review the severity assignment rules</a> or manage the integration with <a href="../integrations/jira-integration/">Jira</a> or <a href="../integrations/slack-integration/">Slack</a>, click the options menu in the top right-hand corner of the page and select respectively <strong>See severity rules</strong> or <strong>View integrations</strong>.</p>
+<h2 id="opening-and-closing-items">How Codacy manages findings<a class="headerlink" href="#opening-and-closing-items" title="Permanent link">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To open and close findings, Codacy must detect when the associated issues are introduced and fixed. The detection logic is platform-dependent and is described below.</p>
+</div>
+<p>Codacy opens a new finding whenever a source platform detects a new security issue. The new finding is automatically assigned a severity and a status:</p>
+<ul>
+<li>The priority of the issue on the source platform sets the <a href="#item-severities-and-deadlines">severity of the finding</a>. In turn, the severity of the finding defines a deadline to close the finding.</li>
+<li>The time to the deadline sets the <a href="#item-statuses">status of the finding</a>. The finding then moves through different statuses as the deadline is approached, met, or missed.</li>
+</ul>
+<p>Codacy closes a finding when the source platform stops detecting the associated security issue.</p>
+<p>The following section details when Codacy opens and closes findings for each supported platform.</p>
+<h3 id="opening-and-closing-codacy-items">How Codacy manages findings detected on Git repositories<a class="headerlink" href="#opening-and-closing-codacy-items" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To make sure that Codacy detects security issues correctly:</p>
+<ul>
+<li><a href="../../repositories-configure/configuring-code-patterns/">Enable code patterns</a> belonging to the Security category. These patterns are enabled by default, but may not be on custom configurations.</li>
+<li>Alternatively, <a href="../using-coding-standards/">apply a coding standard</a> that includes patterns belonging to the Security category.</li>
+<li>Confirm that the latest <a href="../../repositories/commits/">commits</a> to the default branches of your repositories are analyzed.</li>
+</ul>
+</div>
+<p>Codacy opens a new finding when it detects a new security issue on the default branch of a repository.</p>
+<p>Codacy closes a finding in either of the following cases:</p>
+<ul>
+<li>Codacy detects that the associated issue isn't present in the most recent analyzed commit and therefore is fixed</li>
+<li>You <a href="../../repositories/issues/#ignoring-and-managing-issues">ignore the associated issue</a></li>
+<li>You <a href="../../repositories-configure/configuring-code-patterns/">disable the tool</a> that found the associated issue</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Deleting a repository deletes all open findings belonging to that repository.</p>
+</div>
+<h3 id="opening-and-closing-sca-items">How Codacy manages findings detected during software composition analysis (SCA)<a class="headerlink" href="#opening-and-closing-sca-items" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To make sure that Codacy detects dependency issues correctly, <a href="../../repositories-configure/configuring-code-patterns/">enable code patterns</a> belonging to the Trivy tool. </p>
+</div>
+<p>Vulnerable dependencies are a specific GIT repository finding. Similarly to other repository findings, Codacy opens an issue whenever a commit is analyzed.</p>
+<p>Additionally, Codacy scans your codebase every evening to see if it's affected by any newly discovered vulnerabilities.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The proactive SCA scanning is a business tier feature. If you are a Codacy Pro customer interested in upgrading to gain access to this feature, reach out to our customer success team.</p>
+</div>
+<h3 id="opening-and-closing-jira-items">How Codacy manages findings detected on Jira<a class="headerlink" href="#opening-and-closing-jira-items" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>For Codacy to detect Jira issues, you must <a href="../integrations/jira-integration/">integrate Jira with Security and risk management</a>.</li>
+<li>Codacy retrieves updates from Jira once a day. If an issue is opened and closed on the same day, Codacy may not detect it.</li>
+<li>To make sure that Codacy detects Jira issues correctly, assign the <strong>security</strong> label when creating the issue or immediately after.</li>
+</ul>
+</div>
+<p>Codacy opens a new finding when it detects a new Jira issue with a <strong>security</strong> label (case-insensitive).</p>
+<p>Codacy closes a finding when it detects that the associated Jira issue is marked as Closed.</p>
+<h3 id="opening-and-closing-pen-testing-items">How Codacy manages findings detected during penetration testing<a class="headerlink" href="#opening-and-closing-pen-testing-items" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Penetration testing is available upon request and is provided by a third-party partner. See <a href="https://www.codacy.com/security">how to request penetration testing for your organization</a>.</p>
+</div>
+<p>Codacy opens a finding for each security issue detected during a penetration test.</p>
+<p>Codacy closes a finding when a subsequent penetration test doesn't detect the underlying security issue.</p>
+<h3 id="opening-and-closing-app-scanning-items">How Codacy manages findings detected during application scanning (DAST)<a class="headerlink" href="#opening-and-closing-app-scanning-items" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To view application scanning findings, also known as DAST (Dynamic Application Security Testing) findings, you must first <a href="../../codacy-api/examples/uploading-dast-results/">generate a DAST report and upload it to Codacy</a>.</p>
+</div>
+<p>Codacy opens a finding for each security issue detected in the DAST report. If subsequent reports identify the same issue, Codacy updates the existing finding.</p>
+<p>Codacy closes a finding when it's not detected in a subsequent DAST report. If a previously closed issue reappears in a later report, Codacy reopens the finding.</p>
+<h2 id="item-severities-and-deadlines">Finding severities and deadlines<a class="headerlink" href="#item-severities-and-deadlines" title="Permanent link">#</a></h2>
+<p>The following table defines finding severities and the default number of days to the deadline to fix the associated security issue, based on the importance of the underlying issue:</p>
+<table>
+<thead>
+<tr>
+<th>Finding<br/>severity</th>
+<th><br/>Days to deadline</th>
+<th>Underlying Codacy<br/>issue severity</th>
+<th>Underlying Jira<br/>issue priority <sup>1</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>30</td>
+<td>Critical</td>
+<td>Highest</td>
+</tr>
+<tr>
+<td>High</td>
+<td>60</td>
+<td>-</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>90</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>120</td>
+<td>Minor</td>
+<td>Low and other/custom</td>
+</tr>
+</tbody>
+</table>
+<p><small><sup>1</sup> Those listed are the default Jira priority names. If you rename a default Jira priority, it keeps the correct mapping.</small></p>
+<h3 id="item-configurable-deadlines">Customize deadlines<a class="headerlink" href="#item-configurable-deadlines" title="Permanent link">#</a></h3>
+<div class="admonition info">
+<p class="admonition-title">This feature is available only to <a href="../roles-and-permissions-for-organizations/">organization admins and organization managers</a>.</p>
+</div>
+<p>You can configure your findings deadline by clicking on the "Configure SLAs" button, on the right corner of the page.</p>
+<p><img alt="Security and risk management SLAs configure" src="../images/security-risk-management-slas-configure.png" /></p>
+<p>In the open configuration modal you'll be able to input your deadline preferences for each severity. Each deadline must be between a minimum of 1 day and a maximum of 9999 days.</p>
+<p><img alt="Security and risk management SLAs configuration modal" src="../images/security-risk-management-slas-modal.png" /></p>
+<p>As soon as changes are saved, your open findings statuses will be updated accordingly.
+You are also able to reset to Codacy default deadline values (see table above) at any time.</p>
+<h2 id="item-statuses">Finding statuses<a class="headerlink" href="#item-statuses" title="Permanent link">#</a></h2>
+<p>The following table describes how finding statuses map to deadlines:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Status category</th>
+            <th>Finding status</th>
+            <th>Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3">Open</td>
+            <td>Overdue</td>
+            <td>The deadline has been missed</td>
+        </tr>
+        <tr>
+            <td>Due soon</td>
+            <td>Fewer than 15 days to the deadline</td>
+        </tr>
+        <tr>
+            <td>On track</td>
+            <td>15 days or more to the deadline</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Closed</td>
+            <td>Closed late</td>
+            <td>Closed after the deadline</td>
+        </tr>
+        <tr>
+            <td>Closed on time</td>
+            <td>Closed before the deadline</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="supported-security-categories">Supported security categories<a class="headerlink" href="#supported-security-categories" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to a recent update, some issues may be temporarily assigned the <strong>Not yet categorized</strong> category. To categorize these issues, you can <a href="../../faq/repositories/how-do-i-reanalyze-my-repository/#reanalyzing-a-branch">reanalyze the default branch of the relevant repository</a>. For a list of repositories that have issues with this category, use the <strong>Security category</strong> filter on the <a href="#item-list">Findings</a> page.
+Note that some issues just don't have a security category. These issues will remain <strong>Not yet categorized</strong>.</p>
+</div>
+<p>Each Codacy issue reported by Security and risk management belongs to one of the following security categories:</p>
+<table>
+<thead>
+<tr>
+<th>Security category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Android</strong></td>
+<td>Android-specific security issues.</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>Broken authentication and authorization attacks consist in gaining access to accounts that allow disclosing sensitive information or performing operations that could compromise the system.</td>
+</tr>
+<tr>
+<td><strong>Command Injection</strong></td>
+<td>Command injection attacks aim to execute arbitrary commands on the host operating system.</td>
+</tr>
+<tr>
+<td><strong>Cookies</strong></td>
+<td>Security issues related to insecure cookies.</td>
+</tr>
+<tr>
+<td><strong>Cryptography</strong></td>
+<td>Cryptography attacks exploit failures related to cryptography (or lack thereof), <span class="skip-vale">potentially</span> leading to exposure of sensitive data.</td>
+</tr>
+<tr>
+<td><strong>CSRF</strong></td>
+<td>Cross-Site Request Forgery (CSRF) attacks force an end user to execute unwanted actions on a web application in which they're currently authenticated.</td>
+</tr>
+<tr>
+<td><strong>Denial of Service</strong></td>
+<td>Denial of Service (DoS) attacks make a resource (site, application, server) unavailable for legitimate users, typically by flooding the resource with requests or exploiting a vulnerability to trigger a crash.</td>
+</tr>
+<tr>
+<td><strong>File Access</strong></td>
+<td>File access security issues may allow an attacker to access arbitrary files and directories stored on the file system such as application source code, configuration, and critical system files.</td>
+</tr>
+<tr>
+<td><strong>HTTP Headers</strong></td>
+<td>Insecure HTTP headers are a common attack vector for malicious users.</td>
+</tr>
+<tr>
+<td><strong>Input Validation</strong></td>
+<td>Client input should always be validated to prevent malformed or malicious data from entering the workflow of an information system.</td>
+</tr>
+<tr>
+<td><strong>Insecure Modules and Libraries</strong></td>
+<td>Security issues related to modules or libraries that are malicious or can <span class="skip-vale">potentially</span> include vulnerabilities.</td>
+</tr>
+<tr>
+<td><strong>Insecure Storage</strong></td>
+<td>Security issues related to insecure storage of sensitive data.</td>
+</tr>
+<tr>
+<td><strong>Malicious Code</strong></td>
+<td>Security issues related to code patterns that are <span class="skip-vale">potentially</span> unsafe.</td>
+</tr>
+<tr>
+<td><strong>Mass Assignment</strong></td>
+<td>Unprotected mass assignments are a Rails feature that could allow an attacker to update sensitive model attributes.</td>
+</tr>
+<tr>
+<td><strong>Regex</strong></td>
+<td>Regular expressions can be used in Denial of Service attacks, exploiting the fact that in most regular expression implementations the computational load grows exponentially with input size.</td>
+</tr>
+<tr>
+<td><strong>Routes</strong></td>
+<td>Badly configured routes can give unintended access to an attacker.</td>
+</tr>
+<tr>
+<td><strong>SQL Injection</strong></td>
+<td>SQL injection attacks insert or "inject" malicious SQL queries into the application via the client input data.</td>
+</tr>
+<tr>
+<td><strong>SSL</strong></td>
+<td>Security issues related with old SSL versions or configurations that have known cryptographic weaknesses and should no longer be used.</td>
+</tr>
+<tr>
+<td><strong>Unexpected Behaviour</strong></td>
+<td>Security issues related to <span class="skip-vale">potentially</span> insecure system API calls.</td>
+</tr>
+<tr>
+<td><strong>Visibility</strong></td>
+<td>Logging should always be included for security events to better allow attack detection and help defend against vulnerabilities.</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Cross-Site Scripting (XSS) attacks inject malicious client-side scripts into trusted websites that are visited by the end users.</td>
+</tr>
+<tr>
+<td><strong>Other</strong></td>
+<td>Other language-specific security issues.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scan-types">Scan types<a class="headerlink" href="#scan-types" title="Permanent link">#</a></h2>
+<p>Security and risk management classifies each finding with a <strong>Scan type</strong>, indicating the specific source or method used to detect the finding. This information helps you understand the origin of the finding and the context in which the underlying issue was detected.</p>
+<p>The following table lists the available scan types and their descriptions:</p>
+<table>
+<thead>
+<tr>
+<th>Scan type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code Scanning</strong></td>
+<td>Analysis of source code for vulnerabilities without execution. Also known as Static Application Security Testing (<strong>SAST</strong>).</td>
+</tr>
+<tr>
+<td><strong>Software Composition Analysis</strong></td>
+<td>Analysis of external libraries and packages for malicious intent, vulnerabilities or outdated versions.</td>
+</tr>
+<tr>
+<td><strong>Exposed Secrets</strong></td>
+<td>Detection of sensitive information, such as passwords or API keys, inadvertently included in the code.</td>
+</tr>
+<tr>
+<td><strong>Infrastructure as Code</strong></td>
+<td>Detection of configuration issues within infrastructure-as-code (IaC) files that could pose risks.</td>
+</tr>
+<tr>
+<td><strong>Penetration Testing</strong></td>
+<td>Results from <a href="#opening-and-closing-pen-testing-items">penetration testing</a> to find security vulnerabilities in running code.</td>
+</tr>
+<tr>
+<td><strong>App Scanning</strong></td>
+<td>Simulated attacks on live applications to find vulnerabilities. Also known as Dynamic Application Security Testing (<strong>DAST</strong>).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="languages-checked-for-security-issues">Languages checked for security issues<a class="headerlink" href="#languages-checked-for-security-issues" title="Permanent link">#</a></h2>
+<p>Security and risk management supports checking the languages and infrastructure-as-code platforms below for any Codacy security issues reported by the corresponding tools:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Tools that report security issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apex</td>
+      <td><a href="https://pmd.github.io/">PMD</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a></td>
+    </tr>
+    <tr>
+      <td>AWS CloudFormation</td>
+      <td><a href="https://github.com/bridgecrewio/checkov/">Checkov</a>,
+          <a href="https://trivy.dev">Trivy</a> <a href="#yaml-only"><sup>2</sup></a></td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td><a href="https://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a><a href="#client-side"> <sup>3</sup></a>,
+          <a href="http://cppcheck.sourceforge.net/">Cppcheck</a>,
+          <a href="https://dwheeler.com/flawfinder/">Flawfinder</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>C#</td>
+      <td><a href="https://github.com/SonarSource/sonar-dotnet">SonarC#</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>C++</td>
+      <td><a href="https://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a><a href="#client-side"> <sup>3</sup></a>,
+          <a href="http://cppcheck.sourceforge.net/">Cppcheck</a>,
+          <a href="https://dwheeler.com/flawfinder/">Flawfinder</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Dart</td>
+      <td><a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Dockerfile</td>
+      <td><a href="https://github.com/hadolint/hadolint">Hadolint</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Elixir</td>
+      <td><a href="https://github.com/rrrene/credo">Credo</a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>GitHub Actions</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a></td>
+    </tr>
+    <tr>
+      <td>Go</td>
+      <td><a href="https://github.com/securego/gosec">Gosec</a><a href="#client-side"> <sup>3</sup></a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Groovy</td>
+      <td><a href="https://codenarc.github.io/CodeNarc/">CodeNarc</a></td>
+    </tr>
+    <tr>
+      <td>Helm</td>
+      <td><a href="https://trivy.dev">Trivy</a> <a href="#yaml-only"><sup>2</sup></a></td>
+    </tr>
+    <tr>
+      <td>Java</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://spotbugs.github.io/">SpotBugs</a><a href="#client-side"> <sup>3</sup></a><a href="#spotbugs-plugin"> <sup>4</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td><a href="https://eslint.org/">ESLint</a> <a href="#eslint-plugin"><sup>5</sup></a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td><a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Kotlin</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a></td>
+    </tr>
+    <tr>
+      <td>Kubernetes</td>
+      <td><a href="https://trivy.dev">Trivy</a> <a href="#yaml-only"><sup>2</sup></a></td>
+    </tr>
+    <tr>
+      <td>Objective-C</td>
+      <td><a href="https://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a><a href="#client-side"> <sup>3</sup></a></td>
+    </tr>
+    <tr>
+      <td>PHP</td>
+      <td><a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>,
+          <a href="https://phpmd.org/">PHP Mess Detector</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>PowerShell</td>
+      <td><a href="https://github.com/PowerShell/PSScriptAnalyzer">PSScriptAnalyser</a></td>
+    </tr>
+    <tr>
+      <td>Python</td>
+      <td><a href="https://github.com/PyCQA/bandit">Bandit</a>,
+          <a href="https://github.com/landscapeio/prospector">Prospector</a>,
+          <a href="https://github.com/pylint-dev/pylint">Pylint</a>,
+          <a href="https://docs.astral.sh/ruff/">Ruff</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Ruby</td>
+      <td><a href="https://brakemanscanner.org/">Brakeman</a>,
+          <a href="https://github.com/rubocop/rubocop">RuboCop</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Rust</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Scala</td>
+      <td><a href="https://github.com/codacy/codacy-scalameta">Codacy Scalameta Pro</a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://spotbugs.github.io/">SpotBugs</a><a href="#client-side"> <sup>3</sup></a><a href="#spotbugs-plugin"> <sup>4</sup></a></td>
+    </tr>
+    <tr>
+      <td>Swift</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a></td>
+    </tr>
+    <tr>
+      <td>Shell</td>
+      <td><a href="https://www.shellcheck.net/">ShellCheck</a>
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a></td>
+    </tr>
+    <tr>
+      <td>Terraform</td>
+      <td><a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Transact-SQL</td>
+      <td><a href="https://github.com/tsqllint/tsqllint/">TSQLLint</a></td>
+    </tr>
+    <tr>
+      <td>TypeScript</td>
+      <td><a href="https://eslint.org/">ESLint</a> <a href="#eslint-plugin"><sup>5</sup></a>,
+          <a href="https://semgrep.dev/">Semgrep</a> <a href="#semgrep"><sup>1</sup></a>,
+          <a href="https://trivy.dev">Trivy</a></td>
+    </tr>
+    <tr>
+      <td>Visual Basic</td>
+      <td><a href="https://github.com/SonarSource/sonar-dotnet">SonarVB</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dependencies-list">Dependencies<a class="headerlink" href="#dependencies-list" title="Permanent link">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The dependency tab is a business-tier feature. If you are a Codacy Pro customer interested in upgrading to gain access to this feature, contact our customer success team.</p>
+</div>
+<p>The <strong>Security and risk management Dependencies</strong> page displays a unified view of all dependencies used by your repositories. </p>
+<p>To access the dependencies page, access the <a href="#dashboard">overview page</a> and click the <strong>Dependencies</strong> tab.</p>
+<p><img alt="Security and risk management dependencies page" src="../images/security-risk-management-dependencies-list.png" /></p>
+<p>When viewing dependencies, you'll be presented with a list of the dependencies used by all repositories in your organization. For each dependency, you'll be able to see how many repositories are making use of it, how many different versions you are using across all repositories, and how many security findings were found due to the presence of that dependency.</p>
+<p>You can sort the dependencies list using the sort dropdown to prioritize dependencies based on your security assessment needs:</p>
+<ul>
+<li><strong>Highest vulnerability</strong> (default) - Dependencies with the most critical security findings appear first</li>
+<li><strong>Lowest OSSF score</strong> - Dependencies with the lowest <a href="#ossf-scorecard">OSSF Scorecard</a> security scores appear first, helping you identify dependencies that may not follow security best practices</li>
+</ul>
+<p>You're also able to click any dependency to find out more information about it.</p>
+<p><img alt="Security and risk management dependency page" src="../images/security-risk-management-dependencies-single.png" /></p>
+<p>The dependency overview page offers a quick bird's-eye view of that particular dependency. You'll be able to see all different versions that are being used, including which repository is using them, the oldest and most recent versions you're leveraging, as well as the highest criticality of security issues, the license <a href="#license-scanning"><sup>6</sup></a> applied to any particular version of that dependency, and the <a href="#ossf-scorecard">OSSF Scorecard</a> security assessment.</p>
+<h3 id="ossf-scorecard">OSSF Scorecard<a class="headerlink" href="#ossf-scorecard" title="Permanent link">#</a></h3>
+<p>The <strong>OSSF Scorecard</strong> feature provides additional security insights for your dependencies by displaying security assessment data from the Open Source Security Foundation (OSSF) Scorecard project.</p>
+<p>The OSSF Scorecard is an automated tool that evaluates open source repositories against a comprehensive set of security best practices. It performs various checks on a dependency's repository to assess whether the project follows security best practices and helps determine if the dependency is safe for consumption.</p>
+<p>When available, OSSF Scorecard information appears on the dependency overview page, providing you with:</p>
+<ul>
+<li><strong>Overall security score</strong> - A numerical score indicating the overall security posture of the dependency</li>
+<li><strong>Individual check results</strong> - Detailed results for specific security practices such as:<ul>
+<li>Code review practices</li>
+<li>Dependency update policies  </li>
+<li>Security policy documentation</li>
+<li>Vulnerability disclosure processes</li>
+<li>Branch protection configurations</li>
+<li>Binary artifact verification</li>
+<li>Token permissions and usage</li>
+</ul>
+</li>
+</ul>
+<p>This information helps you make informed decisions about the security risks associated with your dependencies and identify which dependencies may require additional scrutiny or alternative options.</p>
+<p><img alt="Security and risk management OSSF scorecard report" src="../images/security-risk-management-ossf-scorecard.png" /></p>
+<p><sup><span id="semgrep">1</span></sup>: Semgrep supports additional security rules when signing up for <a href="https://semgrep.dev/pricing/">Semgrep Pro</a>.<br />
+<sup><span id="yaml-only">2</span></sup>: Currently, Trivy only supports scanning YAML files on this platform.<br />
+<sup><span id="client-side">3</span></sup>: Supported as a <a href="../../repositories-configure/local-analysis/client-side-tools/">client-side tool</a>.<br />
+<sup><span id="spotbugs-plugin">4</span></sup>: Includes the plugin <a href="https://find-sec-bugs.github.io/">Find Security Bugs</a>.<br />
+<sup><span id="eslint-plugin">5</span></sup>: Includes the plugins <a href="https://www.npmjs.com/package/eslint-plugin-no-unsanitized">no-unsanitized</a>, <a href="https://www.npmjs.com/package/eslint-plugin-security">security</a>, <a href="https://www.npmjs.com/package/eslint-plugin-security-node">security-node</a>, and <a href="https://www.npmjs.com/package/eslint-plugin-xss">xss</a>.<br />
+<sup><span id="license-scanning">6</span></sup>: Visit the <a href="../../getting-started/supported-languages-and-tools/#supported-languages-and-tools">supported languages and tools</a> page for a list of supported languages.  </p>
+<h2 id="app-scanning">App scanning<a class="headerlink" href="#app-scanning" title="Permanent link">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>App scanning is a business feature. If you are a Codacy Pro customer, contact our customer success team to access a short trial.</p>
+</div>
+<p>The <strong>Security and risk management &gt; App scanning</strong> page allows organizations to scan Web Applications and APIs for security vulnerabilities. This feature is part of Codacy's Dynamic Application Security Testing (DAST) capabilities, powered by ZAP.</p>
+<p>To access the App scanning page, go to the <a href="#dashboard">Overview page</a> and click the <strong>App scanning</strong> tab.</p>
+<p><img alt="Security and risk management app scanning page" src="../images/security-risk-management-app-scanning.png" /></p>
+<p>App scanning analyzes applications in production or production-like environments to help identify vulnerabilities such as misconfigurations, insecure authentication, or other security issues that occur in real-world usage. Because it doesn't rely on access to source code, it’s language-agnostic and useful for validating security across your entire stack. </p>
+<p>Codacy supports two types of scanning:</p>
+<ul>
+<li>
+<p><strong>Web application scans</strong> perform baseline, non-intrusive analysis. These scans are safe for production environments and detect surface-level issues such as:</p>
+<ul>
+<li>Missing security headers</li>
+<li>Insecure cookie configurations</li>
+<li>Information disclosure through HTTP response headers</li>
+<li>Exposure of sensitive or misconfigured files</li>
+</ul>
+</li>
+<li>
+<p><strong>API scans</strong> simulate real-world attacks against your API endpoints. These are more aggressive and best suited for <strong>non-production environments</strong>, such as staging or development. API scans provide deeper insights into runtime behavior and potential vulnerabilities, such as:</p>
+<ul>
+<li>Broken authentication or authorization controls</li>
+<li>Injection vulnerabilities (SQL or command injection)</li>
+<li>Exposure of sensitive data in API responses</li>
+<li>Insecure CORS or HTTP method configurations</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Already using ZAP? <a href="../../codacy-api/examples/uploading-dast-results/">Upload your results via the API.</a></p>
+</div>
+<h3 id="creating-an-app-scanning-target">Creating an App Scanning target<a class="headerlink" href="#creating-an-app-scanning-target" title="Permanent link">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Do not run API scans on production enviroments as our API scanners may cause potential downtime.</strong></p>
+<p>Our DAST API scanner performs active security testing by sending a large number of requests to your application. When using authenticated API scanning, this activity can be even more intensive, as ZAP explores and probes more of your API surface.</p>
+<p>Depending on how your target environment is configured, this may:</p>
+<ul>
+<li>Trigger rate limiting or throttling</li>
+<li>Appear as a high volume of traffic, similar to a load test</li>
+<li>Lead to incomplete scan results if key endpoints are blocked or limited</li>
+</ul>
+<p>We recommend running scans in a <strong>test or staging environment</strong>, or coordinating with your infrastructure team to ensure that your environment can safely handle the load.</p>
+</div>
+<p>When creating a scan target, you'll be able to choose between a Web App or an API. Configuring a Web App will only require a target URL, while APIs will have other requirements:</p>
+<ul>
+<li><strong>REST APIs</strong>, which require a publicly accessible OpenAPI specification URL.</li>
+<li><strong>GraphQL APIs</strong>, where the schema is inferred from the default path <code>{targetUrl}/graphql</code>.</li>
+</ul>
+<p>API targets optionally support <strong>header-based authentication</strong>. As you create a target, keep in mind you may not be able to view or change certain fields later (to change your configurations you may need to delete and create a new target).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If exposing your API specification isn't feasible for your team, let us know via support or your account representative.</p>
+</div>
+<h3 id="how-to-scan-a-target">How to scan a target<a class="headerlink" href="#how-to-scan-a-target" title="Permanent link">#</a></h3>
+<p>You can initiate scans in two ways:
+- From the <strong>App scanning</strong> tab in the Security and risk management dashboard
+- By automating scans using <a href="../../codacy-api/examples/triggering-dast-scans/">Codacy's API</a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only <a href="../roles-and-permissions-for-organizations/">admins and organization managers</a> can create targets and start scans, both in-app and via the API.</p>
+</div>
+<div>
+  <iframe width="100%" height="472" src="https://www.youtube.com/embed/qPwHlIGJYXs?autoplay=1&mute=1&showinfo=0&loop=1" title="DAST targets" frameborder="0"
+allowfullscreen>
+  </iframe>
+</div>
+
+<p>Each organization can have up to <strong>6 active scan targets</strong>. If you need additional capacity, contact your customer success representative.</p>
+<p>Scans are triggered manually through the UI and are queued before execution. You can queue one single scan per target — it will run sequentially. There is no limit to the number of scans you can run on a target, in order to support your deployment needs.</p>
+<p>Once a scan completes, results will be available under the <strong>Findings</strong> tab. Use the <strong>Scan types &gt; DAST/App scanning</strong> filter to view relevant findings.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Depending on the complexity of the target, DAST scans can take a significant amount of time to complete. Codacy may enforce timeouts to ensure platform stability and fair resource distribution.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Failed scans are retried based on the failure reason. Retries are added back to the queue automatically and processed when capacity allows.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, DAST findings are only visible to admin and organization admin roles.</p>
+</div>
+<h3 id="findings-results-for-your-dast-scans">Findings results for your DAST scans<a class="headerlink" href="#findings-results-for-your-dast-scans" title="Permanent link">#</a></h3>
+<p>As previously mentioned, once a scan completes, results will be available under the <strong>Findings</strong> tab. Use the <strong>Scan types &gt; DAST/App scanning</strong> filter to view relevant findings.
+Additionaly, you can click on a configured target to expand all of that target's results.</p>
+<p><img alt="DAST target results" src="../images/security-risk-management-app-scanning-see-results.png" /></p>
+<p>Follow our <a href="https://roadmap.codacy.com">roadmap</a> for updates on this feature.</p>
+              
+              
+                
+
+
+              
+              
+                
+  <style>#feedback-block{margin-top:3em;padding:1em;background-color:var(--codacy-neutral-50)}#feedback-block h3{margin-top:unset}#feedback-block button{background-color:var(--md-accent-fg-color--transparent);border-radius:.3em;color:var(--codacy-neutral-600);display:inline-block;font:inherit;font-size:.9em;padding:.2em .5em .2em 0;cursor:pointer;width:6em}#feedback-block button .svg-icon{display:inline-block;margin-right:.5em;vertical-align:top;width:1.3em}#feedback-block button:hover{background-color:var(--codacy-neutral-300)}#feedback-block button:disabled{background-color:var(--md-default-fg-color--lightest)}#feedback-block .feedback-button-no{margin-left:1em}#feedback-block #feedback-prompt-no,#feedback-block #feedback-prompt-yes{display:none}#feedback-block .feedback-form{width:100%;max-width:550px}#feedback-block textarea{border:1px solid var(--md-accent-fg-color--transparent);border-radius:.3em;padding:.75rem .5rem .75rem .75rem;line-height:1.1rem;width:100%;max-width:550px}#feedback-block .feedback-button-send{float:left}#feedback-block .character-count{font-size:.8em;float:right}#feedback-block #feedback-thanks{display:none}#feedback-block .feedback-visible{display:block!important}#feedback-block .feedback-invisible{display:none!important}</style>  
+  <div id="feedback-block">
+    <h3>Share your feedback 📢</h3>
+    <div id="feedback-form">
+      <p>Did this page help you?</p>
+      <button id="feedback-button-yes" class="md-icon">
+        <span class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg></span> Yes
+      </button>
+      <button id="feedback-button-no" class="md-icon">
+        <span class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg></span> No
+      </button>
+      <div id="feedback-prompt-yes">
+        <p>
+          Thanks for the feedback! Is there anything else you'd like to tell us about this page?
+        </p>
+        <div class="feedback-form">
+          <textarea rows="5" maxlength="255"></textarea>
+          <br>
+          <button class="feedback-button-send" type="button">Send</button>
+          <span class="character-count">255 characters left</span>
+          <br>
+        </div>
+      </div>
+      <div id="feedback-prompt-no">
+        <p>
+          We're sorry to hear that. Please let us know what we can improve:
+        </p>
+        <div class="feedback-form">
+          <textarea rows="5" maxlength="255"></textarea>
+          <br>
+          <button class="feedback-button-send" type="button">Send</button>
+          <span class="character-count">255 characters left</span>
+          <br>
+        </div>
+        <p>
+          Alternatively, you can <a target="_blank" href="https://github.com/codacy/docs/issues/new?labels=user%20feedback&template=documentation-feedback.md&title=Feedback%20on%20%22Managing security and risk%22">create a more detailed issue on our GitHub repository</a>.
+        </p>
+      </div>
+    </div>
+    <p id="feedback-thanks">
+      Thanks for helping improve the Codacy documentation.
+    </p>
+    
+    <p>
+      <a href="https://github.com/codacy/docs/edit/master/docs/organizations/managing-security-and-risk.md" title="Edit this page">
+        Edit this page on GitHub
+      </a>
+      if you notice something wrong or missing.
+    </p>
+    
+    <p>
+      If you have a question or need help please contact <a href="mailto:support@codacy.com?subject=Question%20regarding%20Managing security and risk">support@codacy.com</a>.
+    </p>
+  </div>
+  <script>
+    // Obtain relevant elements
+    const feedbackForm = document.querySelector('#feedback-block #feedback-form')
+    const yesButton = document.querySelector('#feedback-block #feedback-button-yes');
+    const noButton = document.querySelector('#feedback-block #feedback-button-no');
+    const yesFeedbackPrompt = document.querySelector('#feedback-block #feedback-prompt-yes');
+    const yesTextArea = document.querySelector('#feedback-block #feedback-prompt-yes textarea');
+    const yesSendButton = document.querySelector('#feedback-block #feedback-prompt-yes .feedback-button-send');
+    const yesRemainingCharacters = document.querySelector('#feedback-block #feedback-prompt-yes .character-count');
+    const noFeedbackPrompt = document.querySelector('#feedback-block #feedback-prompt-no');
+    const noTextArea = document.querySelector('#feedback-block #feedback-prompt-no textarea');
+    const noSendButton = document.querySelector('#feedback-block #feedback-prompt-no .feedback-button-send');
+    const noRemainingCharacters = document.querySelector('#feedback-block #feedback-prompt-no .character-count');
+    const userFeedbackThanks = document.querySelector('#feedback-block #feedback-thanks');
+    // Define helper functions
+    function sendQuantitativeFeedback(value) {
+      if (typeof analytics === "object") {
+        // Send event to Segment
+        analytics.track("User Feedback Sent", {
+          url: window.location.href,
+          value: value
+        });
+      }
+    };
+    function disableFeedbackButtons() {
+      yesButton.disabled = true;
+      noButton.disabled = true;
+    }
+    function openYesFeedbackPrompt() {
+      disableFeedbackButtons();
+      yesFeedbackPrompt.classList.add('feedback-visible');
+    };
+    function openNoFeedbackPrompt() {
+      disableFeedbackButtons();
+      noFeedbackPrompt.classList.add('feedback-visible');
+    };
+    function updateRemainingCharacters(textArea, remainingCharacters) {
+      maximum_length = textArea.getAttribute('maxlength')
+      remaining_length = maximum_length - textArea.value.length
+      if (textArea.value.length > maximum_length) {
+          return false;
+      }
+      if (remaining_length == 1) {
+        remainingCharacters.innerHTML = remaining_length + " character left";
+      } else {
+        remainingCharacters.innerHTML = remaining_length + " characters left";
+      }
+    }
+    function sendQualitativeFeedback(value, text) {
+      feedbackForm.classList.add('feedback-invisible');
+      userFeedbackThanks.classList.add('feedback-visible');
+      if (typeof analytics === "object") {
+        // Send event to Segment
+        analytics.track("User Qualitative Feedback Sent", {
+          url: window.location.href,
+          value: value,
+          text: text
+        });
+      }
+    };
+    // Add event listeners
+    // Clicking on the Yes/No buttons
+    yesButton.addEventListener('click', () => {
+      sendQuantitativeFeedback(1);
+      openYesFeedbackPrompt();
+    });
+    noButton.addEventListener('click', () => {
+      sendQuantitativeFeedback(0);
+      openNoFeedbackPrompt();
+    });
+    // Updating the remaining character count
+    yesTextArea.addEventListener('keyup', () => {
+      updateRemainingCharacters(yesTextArea, yesRemainingCharacters);
+    });
+    noTextArea.addEventListener('keyup', () => {
+      updateRemainingCharacters(noTextArea, noRemainingCharacters);
+    });
+    // Clicking on the Send buttons
+    yesSendButton.addEventListener('click', () => {
+      sendQualitativeFeedback(1, yesTextArea.value);
+    });
+    noSendButton.addEventListener('click', () => {
+      sendQualitativeFeedback(0, noTextArea.value);
+    });
+  </script>
+
+              
+              
+                
+                  
+
+<div class="md-source-date">
+  <small>
+    
+      Last modified <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 20, 2026</span>
+    
+  </small>
+</div>
+                
+              
+            </article>
+            
+              
+<footer class="md-footer">
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner">
+      <div class="footer-logo">
+        <img src="../../assets/images/codacy-logo-black.svg" alt="Codacy">
+      </div>
+      <div class="nav-links-wrapper">
+      <ul>
+        <li>Product</li>
+        <li><a href="https://www.codacy.com/product">Product</a></li>
+        <li><a href="https://www.codacy.com/customers">Customers</a></li>
+        <li><a href="https://www.codacy.com/pricing">Pricing</a></li>
+        <li><a href="https://www.codacy.com/enterprise-form">Enterprise</a></li>
+      </ul>
+      <ul>
+        <li>Company</li>
+        <li><a href="https://www.codacy.com/about">About us</a></li>
+        <li><a href="https://www.codacy.com/careers">Careers</a></li>
+        <li><a href="https://security.codacy.com/">Security</a></li>
+        <li><a href="https://www.codacy.com/blog/">Blog</a></li>
+        <li><a href="https://www.codacy.com/ebook">Ebooks</a></li>
+      </ul>
+      <ul>
+        <li>Help</li>
+        <li><a href="https://www.codacy.com/technical-debt-calculator">Tech Debt Calculator</a></li>
+        <li><a href="https://docs.codacy.com/">Documentation</a></li>
+        <li><a href="https://docs.codacy.com/getting-started/getting-started-with-codacy/">Getting started</a></li>
+        <li><a href="https://www.codacy.com/enterprise-form">Request a demo</a></li>
+        <li><a href="https://www.codacy.com/privacy">Privacy policy</a></li>
+        <li><a href="https://www.codacy.com/cookies">Cookies policy</a></li>
+        <li><a href="https://www.codacy.com/terms">Terms of service</a></li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © <script>document.write(new Date().getFullYear())</script> <a href="https://www.codacy.com">Codacy</a> - Automated code review
+          </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+            
+          </div>
+        </div>
+      </main>
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.57114a05.min.js"></script>
+      <script src="../../assets/javascripts/bundle.17d77c1b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5845d53c.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../assets/javascripts/version-select.js"></script>
+      
+      <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=3d46eedc-c17f-4ae6-8385-a62571296d54"></script>
+    
+  </body>
+</html>
